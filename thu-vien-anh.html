@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bê Tráp Uông Bí - Thư Viện Ảnh</title>
+    <!-- Nhúng file CSS dùng chung -->
+    <link rel="stylesheet" href="css/dinh-dang-dung-chung.css">
+    <!-- Nhúng file CSS dùng chung cho banner -->
+    <link rel="stylesheet" href="css/trang-dich-vu.css">
+    <!-- Nhúng file CSS riêng của trang thư viện ảnh -->
+    <link rel="stylesheet" href="css/trang-thu-vien-anh.css">
+</head>
+<body>
+
+    <!-- Khối đầu trang (Header) cố định -->
+    <header class="dau-trang" id="dau-trang-chinh">
+        <!-- Khối chứa logo thương hiệu -->
+        <a href="index.html" class="logo-thuong-hieu">
+            <div class="khung-anh-logo">Ảnh Logo</div>
+            BÊ TRÁP UÔNG BÍ
+        </a>
+
+        <!-- Khối menu điều hướng chính của website -->
+        <nav>
+            <ul class="thanh-menu-dieu-huong">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Khối chứa hotline và nút đặt lịch -->
+        <div class="nhom-nut-dau-trang">
+            <span class="hotline">Hotline: 0987.654.321</span>
+            <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
+        </div>
+    </header>
+
+    <!-- Khối banner tiêu đề trang thư viện ảnh -->
+    <section class="banner-trang-con">
+        <h1>Thư Viện Ảnh</h1>
+        <p>Những khoảnh khắc đẹp nhất trong ngày trọng đại</p>
+    </section>
+
+    <!-- Khối danh mục lọc ảnh -->
+    <section class="bo-loc-anh">
+        <ul class="danh-sach-danh-muc">
+            <li class="dang-chon">Tất cả</li>
+            <li>Tráp nam</li>
+            <li>Tráp nữ</li>
+            <li>Tráp cưới</li>
+            <li>Xe hoa</li>
+            <li>Gia tiên</li>
+            <li>Ảnh thực tế</li>
+        </ul>
+    </section>
+
+    <!-- Khối lưới chứa ảnh -->
+    <section class="luoi-thu-vien-anh">
+        <!-- Khung ảnh 1 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Đội Hình Bê Tráp Nam')">
+            <div class="anh-thu-vien-1">Ảnh Đội Hình Bê Tráp Nam</div>
+            <!-- Lớp mờ (overlay) hiện lên khi hover -->
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+
+        <!-- Khung ảnh 2 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Đội Hình Bê Tráp Nữ')">
+            <div class="anh-thu-vien-2">Ảnh Đội Hình Bê Tráp Nữ</div>
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+
+        <!-- Khung ảnh 3 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Tráp Cưới Rồng Phượng')">
+            <div class="anh-thu-vien-3">Ảnh Tráp Cưới Rồng Phượng</div>
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+
+        <!-- Khung ảnh 4 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Xe Hoa Cưới')">
+            <div class="anh-thu-vien-4">Ảnh Xe Hoa Cưới</div>
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+
+        <!-- Khung ảnh 5 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Cổng Hoa Gia Tiên')">
+            <div class="anh-thu-vien-5">Ảnh Cổng Hoa Gia Tiên</div>
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+
+        <!-- Khung ảnh 6 -->
+        <div class="khung-anh" onclick="moPopupAnh('Ảnh Thực Tế Nhà Trai')">
+            <div class="anh-thu-vien-6">Ảnh Thực Tế Nhà Trai</div>
+            <div class="lop-mo-anh">
+                <span>Xem ảnh lớn</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Khối Cửa sổ phụ (Popup) xem ảnh kích thước lớn -->
+    <div id="popup-anh-lon" class="lop-phu-popup-anh">
+        <span class="nut-dong-popup-anh" onclick="dongPopupAnh()">&times;</span>
+        <div class="khung-chua-anh-lon" id="khung-anh-lon-hien-thi">
+            Ảnh Kích Thước Lớn
+        </div>
+        <div class="tieu-de-anh-lon" id="tieu-de-anh-lon">Mô tả ảnh</div>
+    </div>
+
+    <!-- Khối chân trang (Footer) -->
+    <footer class="chan-trang">
+        <!-- Cột 1: Thông tin thương hiệu -->
+        <div class="cot-chan-trang">
+            <a href="index.html" class="logo-thuong-hieu">
+                <div class="khung-anh-logo-nho">Logo</div> BÊ TRÁP UÔNG BÍ
+            </a>
+            <p>Dịch vụ cưới hỏi trọn gói chuyên nghiệp hàng đầu tại khu vực Quảng Ninh.</p>
+        </div>
+        <!-- Cột 2: Menu liên kết nhanh -->
+        <div class="cot-chan-trang">
+            <h3>Liên Kết Nhanh</h3>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+            </ul>
+        </div>
+        <!-- Cột 3: Danh sách dịch vụ -->
+        <div class="cot-chan-trang">
+            <h3>Dịch Vụ</h3>
+            <ul>
+                <li><a href="dich-vu.html">Bê tráp nam/nữ</a></li>
+                <li><a href="dich-vu.html">Tráp cưới cao cấp</a></li>
+                <li><a href="dich-vu.html">Cho thuê xe hoa</a></li>
+                <li><a href="dich-vu.html">Trang trí gia tiên</a></li>
+            </ul>
+        </div>
+        <!-- Cột 4: Thông tin liên hệ -->
+        <div class="cot-chan-trang">
+            <h3>Liên Hệ</h3>
+            <ul>
+                <li>📍 Địa chỉ: 123 Đường Quang Trung, Uông Bí, Quảng Ninh</li>
+                <li>📞 Hotline: 0987.654.321</li>
+                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Nhúng file JavaScript -->
+    <script src="js/xu-ly-chung.js"></script>
+    <script src="js/hieu-ung-popup.js"></script>
+</body>
+</html>

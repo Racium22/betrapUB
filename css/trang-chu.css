@@ -1,0 +1,392 @@
+/* Định dạng phần Hero Banner */
+.hero-banner {
+    height: 80vh;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Định dạng nội dung bên trong Hero Banner */
+.noi-dung-banner h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Định dạng đoạn văn mô tả trong banner */
+.noi-dung-banner p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Định dạng khu vực thanh tìm kiếm trong banner */
+.thanh-tim-kiem {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Định dạng ô nhập liệu tìm kiếm */
+.thanh-tim-kiem input {
+    padding: 10px 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Định dạng nút tìm kiếm */
+.thanh-tim-kiem button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Định dạng khối chứa nút trong banner */
+.nhom-nut-banner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Định dạng nút xem dịch vụ */
+.nut-xem-dich-vu {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút xem dịch vụ */
+.nut-xem-dich-vu:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Định dạng khu vực số liệu nổi bật */
+.so-lieu-noi-bat {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #fff;
+}
+
+/* Định dạng từng thẻ số liệu */
+.the-so-lieu {
+    text-align: center;
+}
+
+/* Định dạng con số nổi bật */
+.the-so-lieu h3 {
+    font-size: 2.5em;
+    color: #E63946;
+}
+
+/* Định dạng tiêu đề chung các phần */
+.tieu-de-phan {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 50px 0 30px;
+    color: #333;
+}
+
+/* Định dạng lưới chứa dịch vụ nổi bật */
+.luoi-dich-vu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 50px 50px;
+}
+
+/* Định dạng từng thẻ dịch vụ */
+.the-dich-vu {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào thẻ dịch vụ */
+.the-dich-vu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+/* Khung giữ chỗ cho ảnh dịch vụ (dùng chung cho 6 ảnh) */
+.anh-dich-vu-trang-chu-1, .anh-dich-vu-trang-chu-2, .anh-dich-vu-trang-chu-3,
+.anh-dich-vu-trang-chu-4, .anh-dich-vu-trang-chu-5, .anh-dich-vu-trang-chu-6 {
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Định dạng tiêu đề thẻ dịch vụ */
+.the-dich-vu h3 {
+    margin-bottom: 15px;
+}
+
+/* Định dạng đoạn văn trong thẻ dịch vụ */
+.the-dich-vu p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Định dạng nút xem chi tiết trong thẻ dịch vụ */
+.nut-xem-chi-tiet {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút xem chi tiết */
+.nut-xem-chi-tiet:hover {
+    background-color: #ddd;
+}
+
+/* Định dạng khu vực quy trình đặt dịch vụ */
+.quy-trinh-dat-dich-vu {
+    background-color: #fff;
+    padding: 50px;
+}
+
+/* Định dạng danh sách các bước quy trình */
+.danh-sach-buoc {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Đường gạch ngang nối các bước */
+.danh-sach-buoc::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+/* Định dạng từng bước trong quy trình */
+.buoc {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+/* Định dạng vòng tròn chứa số thứ tự bước */
+.vong-tron-buoc {
+    width: 60px;
+    height: 60px;
+    background-color: #E63946;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+/* Định dạng khu vực giới thiệu thương hiệu */
+.gioi-thieu-thuong-hieu {
+    display: flex;
+    padding: 50px;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Định dạng cột hình ảnh bên trái */
+.cot-hinh-anh {
+    flex: 1;
+}
+
+/* Khung giữ chỗ cho ảnh thực tế đội ngũ */
+.anh-gioi-thieu-trang-chu {
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Định dạng cột nội dung bên phải */
+.cot-noi-dung {
+    flex: 1;
+}
+
+/* Định dạng tiêu đề phần giới thiệu */
+.cot-noi-dung h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Định dạng đoạn văn trong phần giới thiệu */
+.cot-noi-dung p {
+    margin-bottom: 20px;
+}
+
+/* Định dạng danh sách trong phần giới thiệu */
+.cot-noi-dung ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* Định dạng nút tìm hiểu thêm */
+.nut-tim-hieu-them {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút tìm hiểu thêm */
+.nut-tim-hieu-them:hover {
+    background-color: #555;
+}
+
+/* Định dạng khu vực đánh giá khách hàng */
+.danh-gia-khach-hang {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Định dạng thanh trượt chứa đánh giá */
+.thanh-truot-danh-gia {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Định dạng từng thẻ đánh giá */
+.the-danh-gia {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Khung giữ chỗ cho avatar khách hàng */
+.avatar-khach-hang-1, .avatar-khach-hang-2 {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Định dạng khu vực sao đánh giá */
+.sao-danh-gia {
+    color: #ffc107;
+    margin: 10px 0;
+}
+
+/* Định dạng các nút điều khiển thanh trượt */
+.dieu-khien-slider {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Định dạng các nút trong khối điều khiển */
+.dieu-khien-slider button {
+    padding: 8px 15px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút điều khiển slider */
+.dieu-khien-slider button:hover {
+    background-color: #aaa;
+}
+
+/* Định dạng khu vực kêu gọi hành động cuối trang (CTA) */
+.cta-cuoi-trang {
+    background-color: #E63946;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Định dạng tiêu đề CTA */
+.cta-cuoi-trang h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Định dạng đoạn văn CTA */
+.cta-cuoi-trang p {
+    margin-bottom: 30px;
+}
+
+/* Định dạng khối chứa các nút CTA */
+.nhom-nut-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Định dạng hotline trong CTA */
+.hotline-cta {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Định dạng nút nhận tư vấn */
+.nut-nhan-tu-van {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào nút nhận tư vấn */
+.nut-nhan-tu-van:hover {
+    background-color: #fff;
+    color: #E63946;
+}

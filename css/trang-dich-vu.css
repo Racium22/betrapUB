@@ -1,0 +1,69 @@
+/* Định dạng banner tiêu đề cho các trang con (Dịch vụ, Mẫu tráp, Liên hệ...) */
+.banner-trang-con {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Định dạng tiêu đề chính của banner trang con */
+.banner-trang-con h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #E63946;
+}
+
+/* Định dạng phần hiển thị từng dịch vụ chi tiết */
+.chi-tiet-dich-vu {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* Định dạng cho những dịch vụ muốn hình ảnh nằm bên phải (đảo ngược vị trí) */
+.chi-tiet-dich-vu.doi-chieu {
+    background-color: #f9f9f9;
+}
+
+/* Khung giữ chỗ cho ảnh dịch vụ trong trang chi tiết */
+.anh-dich-vu-trang-dich-vu-1, .anh-dich-vu-trang-dich-vu-2,
+.anh-dich-vu-trang-dich-vu-3, .anh-dich-vu-trang-dich-vu-4 {
+    flex: 1;
+    height: 350px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1.2em;
+}
+
+/* Định dạng khối nội dung mô tả dịch vụ */
+.noi-dung-dich-vu {
+    flex: 1;
+}
+
+/* Định dạng tiêu đề tên dịch vụ */
+.noi-dung-dich-vu h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Định dạng đoạn văn mô tả dịch vụ */
+.noi-dung-dich-vu p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Định dạng dòng hiển thị giá dịch vụ */
+.gia-dich-vu {
+    font-weight: bold;
+    color: #d32f2f !important;
+    font-size: 1.2em !important;
+}

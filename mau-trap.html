@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bê Tráp Uông Bí - Mẫu Tráp</title>
+    <!-- Nhúng file CSS dùng chung -->
+    <link rel="stylesheet" href="css/dinh-dang-dung-chung.css">
+    <!-- Nhúng file CSS dùng chung cho banner -->
+    <link rel="stylesheet" href="css/trang-dich-vu.css">
+    <!-- Nhúng file CSS riêng của trang mẫu tráp -->
+    <link rel="stylesheet" href="css/trang-mau-trap.css">
+</head>
+<body>
+
+    <!-- Khối đầu trang (Header) cố định -->
+    <header class="dau-trang" id="dau-trang-chinh">
+        <!-- Khối chứa logo thương hiệu -->
+        <a href="index.html" class="logo-thuong-hieu">
+            <div class="khung-anh-logo">Ảnh Logo</div>
+            BÊ TRÁP UÔNG BÍ
+        </a>
+
+        <!-- Khối menu điều hướng chính của website -->
+        <nav>
+            <ul class="thanh-menu-dieu-huong">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Khối chứa hotline và nút đặt lịch -->
+        <div class="nhom-nut-dau-trang">
+            <span class="hotline">Hotline: 0987.654.321</span>
+            <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
+        </div>
+    </header>
+
+    <!-- Khối banner tiêu đề trang mẫu tráp -->
+    <section class="banner-trang-con">
+        <h1>Bộ Sưu Tập Mẫu Tráp Cưới</h1>
+        <p>Đa dạng phong cách, tinh tế từng chi tiết</p>
+    </section>
+
+    <!-- Khối chứa bộ lọc tìm kiếm mẫu tráp -->
+    <section class="bo-loc-mau-trap">
+        <!-- Tiêu đề bộ lọc -->
+        <span class="tieu-de-loc">Lọc theo:</span>
+        <!-- Lọc theo số lượng tráp -->
+        <select class="o-chon-loc">
+            <option value="tat-ca">Tất cả số lượng</option>
+            <option value="5-trap">5 Tráp</option>
+            <option value="7-trap">7 Tráp</option>
+            <option value="9-trap">9 Tráp</option>
+        </select>
+        <!-- Lọc theo màu sắc -->
+        <select class="o-chon-loc">
+            <option value="tat-ca">Tất cả màu sắc</option>
+            <option value="do">Màu Đỏ</option>
+            <option value="vang">Màu Vàng Gold</option>
+            <option value="hong">Màu Hồng Pastel</option>
+        </select>
+    </section>
+
+    <!-- Khối lưới chứa danh sách các mẫu tráp -->
+    <section class="danh-sach-mau-trap">
+        <!-- Thẻ mẫu tráp 1 -->
+        <div class="the-mau-trap">
+            <!-- Khung giữ chỗ cho ảnh mẫu tráp -->
+            <div class="anh-mau-trap-1">Ảnh Tráp Rồng Phượng</div>
+            <h3>Bộ 7 Tráp Rồng Phượng</h3>
+            <p class="gia-tham-khao">Từ 4.500.000 VNĐ</p>
+            <!-- Nút gọi hàm mở popup bằng JavaScript -->
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Rồng Phượng', 'anh-mau-trap-1')">Xem chi tiết</button>
+        </div>
+        
+        <!-- Thẻ mẫu tráp 2 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-2">Ảnh Tráp Hoa Sen</div>
+            <h3>Bộ 5 Tráp Hoa Sen Truyền Thống</h3>
+            <p class="gia-tham-khao">Từ 3.200.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hoa Sen', 'anh-mau-trap-2')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 3 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-3">Ảnh Tráp Hiện Đại</div>
+            <h3>Bộ 9 Tráp Hiện Đại Tone Hồng</h3>
+            <p class="gia-tham-khao">Từ 5.800.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Tone Hồng', 'anh-mau-trap-3')">Xem chi tiết</button>
+        </div>
+    </section>
+
+    <!-- Khối Cửa sổ phụ (Popup) xem chi tiết -->
+    <!-- Mặc định bị ẩn (display: none) bằng CSS -->
+    <div id="popup-chi-tiet" class="lop-phu-popup">
+        <!-- Khung nội dung chính của popup -->
+        <div class="noi-dung-popup">
+            <!-- Nút đóng popup -->
+            <span class="nut-dong-popup" onclick="dongPopup()">&times;</span>
+            <!-- Tiêu đề trong popup -->
+            <h2 id="tieu-de-popup">Tên Mẫu Tráp</h2>
+            
+            <div class="bo-cuc-popup">
+                <!-- Khu vực hiển thị ảnh trong popup -->
+                <div class="khu-vuc-anh-popup" id="anh-popup-hien-thi">
+                    Ảnh chi tiết
+                </div>
+                <!-- Khu vực hiển thị thông tin trong popup -->
+                <div class="khu-vuc-thong-tin-popup">
+                    <h3>Thành phần gồm có:</h3>
+                    <ul>
+                        <li>Tráp trầu cau kết nghệ thuật</li>
+                        <li>Tráp rượu thuốc (3 vang, 3 thăng long)</li>
+                        <li>Tráp lẵng hoa quả rồng phượng</li>
+                        <li>Tráp bánh phu thê/bánh cốm</li>
+                        <li>Tráp mứt hạt sen/chè</li>
+                    </ul>
+                    <p><strong>Chất liệu:</strong> Vỏ tráp sơn mài cao cấp, hoa tươi nhập khẩu.</p>
+                    <a href="lien-he.html" class="nut-dat-lich mt-20">ĐẶT MẪU NÀY NGAY</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Khối chân trang (Footer) -->
+    <footer class="chan-trang">
+        <!-- Cột 1: Thông tin thương hiệu -->
+        <div class="cot-chan-trang">
+            <a href="index.html" class="logo-thuong-hieu">
+                <div class="khung-anh-logo-nho">Logo</div> BÊ TRÁP UÔNG BÍ
+            </a>
+            <p>Dịch vụ cưới hỏi trọn gói chuyên nghiệp hàng đầu tại khu vực Quảng Ninh.</p>
+        </div>
+        <!-- Cột 2: Menu liên kết nhanh -->
+        <div class="cot-chan-trang">
+            <h3>Liên Kết Nhanh</h3>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+            </ul>
+        </div>
+        <!-- Cột 3: Danh sách dịch vụ -->
+        <div class="cot-chan-trang">
+            <h3>Dịch Vụ</h3>
+            <ul>
+                <li><a href="dich-vu.html">Bê tráp nam/nữ</a></li>
+                <li><a href="dich-vu.html">Tráp cưới cao cấp</a></li>
+                <li><a href="dich-vu.html">Cho thuê xe hoa</a></li>
+                <li><a href="dich-vu.html">Trang trí gia tiên</a></li>
+            </ul>
+        </div>
+        <!-- Cột 4: Thông tin liên hệ -->
+        <div class="cot-chan-trang">
+            <h3>Liên Hệ</h3>
+            <ul>
+                <li>📍 Địa chỉ: 123 Đường Quang Trung, Uông Bí, Quảng Ninh</li>
+                <li>📞 Hotline: 0987.654.321</li>
+                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Nhúng file JavaScript -->
+    <script src="js/xu-ly-chung.js"></script>
+    <script src="js/hieu-ung-popup.js"></script>
+</body>
+</html>

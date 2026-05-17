@@ -1,0 +1,178 @@
+/* Định dạng khu vực bộ lọc tìm kiếm */
+.bo-loc-mau-trap {
+    background-color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Định dạng chữ tiêu đề bộ lọc */
+.tieu-de-loc {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Định dạng các ô chọn (select) trong bộ lọc */
+.o-chon-loc {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Định dạng lưới chứa danh sách mẫu tráp */
+.danh-sach-mau-trap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+
+/* Định dạng từng thẻ mẫu tráp */
+.the-mau-trap {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào thẻ mẫu tráp */
+.the-mau-trap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Khung giữ chỗ cho ảnh mẫu tráp */
+.anh-mau-trap-1, .anh-mau-trap-2, .anh-mau-trap-3 {
+    height: 250px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Định dạng tiêu đề mẫu tráp */
+.the-mau-trap h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Định dạng giá tham khảo */
+.gia-tham-khao {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Định dạng nút xem chi tiết */
+.nut-xem-chi-tiet-trap {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover vào nút xem chi tiết */
+.nut-xem-chi-tiet-trap:hover {
+    background-color: #E63946;
+}
+
+/* ---- ĐỊNH DẠNG POPUP ---- */
+
+/* Lớp phủ mờ toàn màn hình của popup */
+.lop-phu-popup {
+    display: none; /* Ẩn đi theo mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung nội dung chính của popup */
+.noi-dung-popup {
+    background-color: #fff;
+    width: 800px;
+    max-width: 90%;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    animation: hienLen 0.3s ease-out;
+}
+
+/* Hiệu ứng xuất hiện popup */
+@keyframes hienLen {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Nút đóng (X) góc phải trên của popup */
+.nut-dong-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Hiệu ứng hover nút đóng popup */
+.nut-dong-popup:hover {
+    color: #333;
+}
+
+/* Bố cục chia 2 cột bên trong popup */
+.bo-cuc-popup {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Khu vực hiển thị ảnh bên trái popup */
+.khu-vuc-anh-popup {
+    flex: 1;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Khu vực thông tin chi tiết bên phải popup */
+.khu-vuc-thong-tin-popup {
+    flex: 1;
+}
+
+/* Định dạng danh sách thành phần trong popup */
+.khu-vuc-thong-tin-popup ul {
+    list-style: square;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Lớp margin top phụ trợ */
+.mt-20 {
+    margin-top: 20px;
+    display: inline-block;
+}

@@ -1,0 +1,132 @@
+/* Định dạng khu vực nội dung chính của trang liên hệ */
+.noi-dung-lien-he {
+    display: flex;
+    padding: 50px;
+    gap: 50px;
+    background-color: #f9f9f9;
+}
+
+/* Định dạng khung chứa form tư vấn bên trái */
+.khung-form-tu-van {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Định dạng tiêu đề của form tư vấn */
+.khung-form-tu-van h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Định dạng form tư vấn */
+.form-tu-van {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Định dạng nhóm nhập liệu (chứa label và input) */
+.nhom-nhap-lieu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Định dạng thẻ nhãn (label) */
+.nhom-nhap-lieu label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Định dạng các ô nhập liệu chung (input text, tel, date, select, textarea) */
+.nhom-nhap-lieu input,
+.nhom-nhap-lieu select,
+.nhom-nhap-lieu textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Hiệu ứng khi đang nhập (focus) vào ô */
+.nhom-nhap-lieu input:focus,
+.nhom-nhap-lieu select:focus,
+.nhom-nhap-lieu textarea:focus {
+    border-color: #E63946;
+}
+
+/* Định dạng nút gửi yêu cầu tư vấn */
+.nut-gui-yeu-cau {
+    padding: 15px;
+    background-color: #E63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng hover vào nút gửi yêu cầu */
+.nut-gui-yeu-cau:hover {
+    background-color: #D90429;
+}
+
+/* Định dạng khung bên phải (chứa thông tin liên hệ và bản đồ) */
+.khung-thong-tin-va-ban-do {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Định dạng thẻ chứa thông tin liên hệ trực tiếp */
+.thong-tin-lien-he {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Định dạng tiêu đề khối thông tin liên hệ */
+.thong-tin-lien-he h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Định dạng danh sách thông tin liên hệ */
+.thong-tin-lien-he ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Định dạng màu cho phần in đậm trong thông tin liên hệ */
+.thong-tin-lien-he ul li strong {
+    color: #E63946;
+}
+
+/* Định dạng thẻ chứa iframe bản đồ */
+.khung-ban-do {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Định dạng iframe bản đồ */
+.khung-ban-do iframe {
+    border-radius: 8px;
+}

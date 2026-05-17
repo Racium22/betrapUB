@@ -1,0 +1,142 @@
+/* Định dạng khu vực danh mục lọc ảnh */
+.bo-loc-anh {
+    background-color: #fff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Định dạng danh sách các danh mục lọc */
+.danh-sach-danh-muc {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Định dạng từng mục (li) trong danh mục */
+.danh-sach-danh-muc li {
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào hoặc mục đang được chọn */
+.danh-sach-danh-muc li:hover, .danh-sach-danh-muc li.dang-chon {
+    background-color: #E63946;
+    color: #fff;
+}
+
+/* Định dạng lưới hiển thị ảnh */
+.luoi-thu-vien-anh {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 50px;
+}
+
+/* Định dạng khung chứa từng bức ảnh */
+.khung-anh {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Khung giữ chỗ cho ảnh thư viện */
+.anh-thu-vien-1, .anh-thu-vien-2, .anh-thu-vien-3,
+.anh-thu-vien-4, .anh-thu-vien-5, .anh-thu-vien-6 {
+    height: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    transition: transform 0.5s ease;
+}
+
+/* Lớp phủ mờ (overlay) khi di chuột vào ảnh */
+.lop-mo-anh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    opacity: 0; /* Ẩn đi mặc định */
+    transition: opacity 0.3s ease;
+}
+
+/* Hiệu ứng hiển thị lớp mờ khi hover khung ảnh */
+.khung-anh:hover .lop-mo-anh {
+    opacity: 1;
+}
+
+/* Hiệu ứng phóng to ảnh bên trong khi hover khung ảnh */
+.khung-anh:hover div[class^="anh-thu-vien"] {
+    transform: scale(1.1);
+}
+
+/* ---- ĐỊNH DẠNG POPUP ẢNH LỚN ---- */
+
+/* Lớp phủ mờ cho popup ảnh lớn */
+.lop-phu-popup-anh {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Nút đóng popup ảnh lớn */
+.nut-dong-popup-anh {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Khung hiển thị ảnh lớn (placeholder) */
+.khung-chua-anh-lon {
+    width: 80%;
+    height: 80%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #555;
+    border-radius: 5px;
+    animation: phongTo 0.3s ease-out;
+}
+
+/* Tiêu đề mô tả bên dưới ảnh lớn */
+.tieu-de-anh-lon {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/* Hiệu ứng phóng to mượt mà */
+@keyframes phongTo {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bê Tráp Uông Bí - Liên Hệ</title>
+    <!-- Nhúng file CSS dùng chung -->
+    <link rel="stylesheet" href="css/dinh-dang-dung-chung.css">
+    <!-- Nhúng file CSS dùng chung cho banner -->
+    <link rel="stylesheet" href="css/trang-dich-vu.css">
+    <!-- Nhúng file CSS riêng của trang liên hệ -->
+    <link rel="stylesheet" href="css/trang-lien-he.css">
+</head>
+<body>
+
+    <!-- Khối đầu trang (Header) cố định -->
+    <header class="dau-trang" id="dau-trang-chinh">
+        <!-- Khối chứa logo thương hiệu -->
+        <a href="index.html" class="logo-thuong-hieu">
+            <div class="khung-anh-logo">Ảnh Logo</div>
+            BÊ TRÁP UÔNG BÍ
+        </a>
+
+        <!-- Khối menu điều hướng chính của website -->
+        <nav>
+            <ul class="thanh-menu-dieu-huong">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Khối chứa hotline và nút đặt lịch -->
+        <div class="nhom-nut-dau-trang">
+            <span class="hotline">Hotline: 0987.654.321</span>
+            <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
+        </div>
+    </header>
+
+    <!-- Khối banner tiêu đề trang liên hệ -->
+    <section class="banner-trang-con">
+        <h1>Liên Hệ Với Chúng Tôi</h1>
+        <p>Để lại thông tin để nhận tư vấn và báo giá chi tiết</p>
+    </section>
+
+    <!-- Khối chứa nội dung liên hệ chính -->
+    <section class="noi-dung-lien-he">
+        
+        <!-- Khung chứa Form tư vấn -->
+        <div class="khung-form-tu-van">
+            <h2>Gửi Yêu Cầu Tư Vấn</h2>
+            <form action="#" method="POST" class="form-tu-van">
+                <!-- Nhập Họ tên -->
+                <div class="nhom-nhap-lieu">
+                    <label for="ho-ten">Họ và tên *</label>
+                    <input type="text" id="ho-ten" placeholder="Nhập họ và tên của bạn" required>
+                </div>
+                
+                <!-- Nhập SĐT -->
+                <div class="nhom-nhap-lieu">
+                    <label for="so-dien-thoai">Số điện thoại *</label>
+                    <input type="tel" id="so-dien-thoai" placeholder="Nhập số điện thoại" required>
+                </div>
+
+                <!-- Chọn Ngày cưới -->
+                <div class="nhom-nhap-lieu">
+                    <label for="ngay-cuoi">Ngày tổ chức (Dự kiến) *</label>
+                    <input type="date" id="ngay-cuoi" required>
+                </div>
+
+                <!-- Chọn Dịch vụ cần tư vấn -->
+                <div class="nhom-nhap-lieu">
+                    <label for="dich-vu-can-tu-van">Dịch vụ quan tâm</label>
+                    <select id="dich-vu-can-tu-van">
+                        <option value="be-trap">Bê tráp nam/nữ</option>
+                        <option value="mau-trap">Đặt mẫu tráp</option>
+                        <option value="xe-hoa">Thuê xe hoa</option>
+                        <option value="trang-tri">Trang trí gia tiên</option>
+                        <option value="tron-goi">Combo trọn gói</option>
+                    </select>
+                </div>
+
+                <!-- Nhập Ghi chú -->
+                <div class="nhom-nhap-lieu">
+                    <label for="ghi-chu">Ghi chú thêm</label>
+                    <textarea id="ghi-chu" rows="4" placeholder="Nhập yêu cầu đặc biệt hoặc câu hỏi của bạn"></textarea>
+                </div>
+
+                <!-- Nút gửi yêu cầu -->
+                <button type="submit" class="nut-gui-yeu-cau">GỬI YÊU CẦU TƯ VẤN</button>
+            </form>
+        </div>
+
+        <!-- Khung hiển thị thông tin liên hệ và bản đồ -->
+        <div class="khung-thong-tin-va-ban-do">
+            
+            <!-- Khối thông tin liên hệ trực tiếp -->
+            <div class="thong-tin-lien-he">
+                <h2>Thông Tin Liên Hệ</h2>
+                <ul>
+                    <li><strong>Hotline/Zalo:</strong> 0987.654.321</li>
+                    <li><strong>Facebook:</strong> fb.com/betrapuongbi</li>
+                    <li><strong>Email:</strong> lienhe@betrapuongbi.com</li>
+                    <li><strong>Địa chỉ:</strong> 123 Đường Quang Trung, P. Quang Trung, TP. Uông Bí, Quảng Ninh</li>
+                    <li><strong>Giờ làm việc:</strong> 8:00 - 20:00 (Tất cả các ngày trong tuần)</li>
+                </ul>
+            </div>
+
+            <!-- Khối bản đồ Google Maps -->
+            <div class="khung-ban-do">
+                <!-- Giữ khung trống cho bản đồ iframe -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119253.25049514741!2d106.69177114295965!3d21.03458639209598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a51e605d5e2e9%3A0x7d6f5f3e49e29a9f!2zVHAuIFXDtG5nIELDrSwgUXXhuqNuZyBOaW5o!5e0!3m2!1svi!2s!4v1689654125890!5m2!1svi!2s" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Khối chân trang (Footer) -->
+    <footer class="chan-trang">
+        <!-- Cột 1: Thông tin thương hiệu -->
+        <div class="cot-chan-trang">
+            <a href="index.html" class="logo-thuong-hieu">
+                <div class="khung-anh-logo-nho">Logo</div> BÊ TRÁP UÔNG BÍ
+            </a>
+            <p>Dịch vụ cưới hỏi trọn gói chuyên nghiệp hàng đầu tại khu vực Quảng Ninh.</p>
+        </div>
+        <!-- Cột 2: Menu liên kết nhanh -->
+        <div class="cot-chan-trang">
+            <h3>Liên Kết Nhanh</h3>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="dich-vu.html">Dịch vụ</a></li>
+                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+            </ul>
+        </div>
+        <!-- Cột 3: Danh sách dịch vụ -->
+        <div class="cot-chan-trang">
+            <h3>Dịch Vụ</h3>
+            <ul>
+                <li><a href="dich-vu.html">Bê tráp nam/nữ</a></li>
+                <li><a href="dich-vu.html">Tráp cưới cao cấp</a></li>
+                <li><a href="dich-vu.html">Cho thuê xe hoa</a></li>
+                <li><a href="dich-vu.html">Trang trí gia tiên</a></li>
+            </ul>
+        </div>
+        <!-- Cột 4: Thông tin liên hệ -->
+        <div class="cot-chan-trang">
+            <h3>Liên Hệ</h3>
+            <ul>
+                <li>📍 Địa chỉ: 123 Đường Quang Trung, Uông Bí, Quảng Ninh</li>
+                <li>📞 Hotline: 0987.654.321</li>
+                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Nhúng file JavaScript -->
+    <script src="js/xu-ly-chung.js"></script>
+</body>
+</html>
