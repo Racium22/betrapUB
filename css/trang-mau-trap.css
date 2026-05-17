@@ -176,3 +176,42 @@
     margin-top: 20px;
     display: inline-block;
 }
+
+/* =========================================
+   Responsive Design cho Trang Mẫu Tráp
+========================================= */
+@media (max-width: 1024px) {
+    .danh-sach-mau-trap {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bo-loc-mau-trap {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    .o-chon-loc {
+        width: 100%;
+    }
+    
+    .danh-sach-mau-trap {
+        grid-template-columns: 1fr;
+    }
+    
+    .bo-cuc-popup {
+        flex-direction: column;
+    }
+    
+    .khu-vuc-anh-popup {
+        height: 200px;
+    }
+    
+    .noi-dung-popup {
+        padding: 20px;
+        margin-top: 30px;
+    }
+}

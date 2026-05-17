@@ -130,3 +130,18 @@
 .khung-ban-do iframe {
     border-radius: 8px;
 }
+
+/* =========================================
+   Responsive Design cho Trang Liên Hệ
+========================================= */
+@media (max-width: 768px) {
+    .noi-dung-lien-he {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .khung-form-tu-van, .thong-tin-lien-he, .khung-ban-do {
+        padding: 20px;
+    }
+}

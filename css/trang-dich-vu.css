@@ -67,3 +67,24 @@
     color: #d32f2f !important;
     font-size: 1.2em !important;
 }
+
+/* =========================================
+   Responsive Design cho Trang Dịch Vụ
+========================================= */
+@media (max-width: 768px) {
+    .chi-tiet-dich-vu, .chi-tiet-dich-vu.doi-chieu {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .anh-dich-vu-trang-dich-vu-1, .anh-dich-vu-trang-dich-vu-2,
+    .anh-dich-vu-trang-dich-vu-3, .anh-dich-vu-trang-dich-vu-4 {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .banner-trang-con {
+        padding: 50px 20px;
+    }
+}

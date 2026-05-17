@@ -157,3 +157,36 @@ body {
 .cot-chan-trang ul li a:hover {
     color: #fff;
 }
+
+/* =========================================
+   Responsive Design (Đa màn hình)
+========================================= */
+
+/* Màn hình Tablet (dưới 1024px) */
+@media (max-width: 1024px) {
+    .chan-trang {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+}
+
+/* Màn hình Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    .dau-trang {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .thanh-menu-dieu-huong {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .chan-trang {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        text-align: center;
+    }
+}

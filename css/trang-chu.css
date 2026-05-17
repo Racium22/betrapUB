@@ -390,3 +390,72 @@
     background-color: #fff;
     color: #E63946;
 }
+
+/* =========================================
+   Responsive Design (Đa màn hình) cho Trang chủ
+========================================= */
+
+/* Tablet (dưới 1024px) */
+@media (max-width: 1024px) {
+    .luoi-dich-vu {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px 30px;
+    }
+    
+    .gioi-thieu-thuong-hieu {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .so-lieu-noi-bat {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+}
+
+/* Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: auto;
+        padding: 50px 20px;
+    }
+    
+    .noi-dung-banner h1 {
+        font-size: 2em;
+    }
+    
+    .thanh-tim-kiem {
+        flex-direction: column;
+    }
+    
+    .thanh-tim-kiem input {
+        width: 100%;
+    }
+    
+    .nhom-nut-banner {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .the-so-lieu {
+        width: 45%;
+    }
+    
+    .luoi-dich-vu {
+        grid-template-columns: 1fr;
+    }
+    
+    .danh-sach-buoc {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .danh-sach-buoc::before {
+        display: none; 
+    }
+    
+    .nhom-nut-cta {
+        flex-direction: column;
+    }
+}

@@ -140,3 +140,40 @@
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+/* =========================================
+   Responsive Design cho Trang Thư Viện Ảnh
+========================================= */
+@media (max-width: 1024px) {
+    .luoi-thu-vien-anh {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .danh-sach-danh-muc {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .bo-loc-anh {
+        padding: 20px;
+    }
+    
+    .luoi-thu-vien-anh {
+        grid-template-columns: 1fr;
+    }
+    
+    .anh-thu-vien-1, .anh-thu-vien-2, .anh-thu-vien-3,
+    .anh-thu-vien-4, .anh-thu-vien-5, .anh-thu-vien-6 {
+        height: 250px;
+    }
+    
+    .khung-chua-anh-lon {
+        width: 95%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+}
