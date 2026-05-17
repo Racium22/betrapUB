@@ -6,8 +6,7 @@
     <title>Bê Tráp Uông Bí - Mẫu Tráp</title>
     <!-- Nhúng file CSS dùng chung -->
     <link rel="stylesheet" href="css/dinh-dang-dung-chung.css">
-    <!-- Nhúng file CSS dùng chung cho banner -->
-    <link rel="stylesheet" href="css/trang-dich-vu.css">
+
     <!-- Nhúng file CSS riêng của trang mẫu tráp -->
     <link rel="stylesheet" href="css/trang-mau-trap.css">
 </head>
@@ -17,8 +16,10 @@
     <header class="dau-trang" id="dau-trang-chinh">
         <!-- Khối chứa logo thương hiệu -->
         <a href="index.html" class="logo-thuong-hieu">
-            <div class="khung-anh-logo">Ảnh Logo</div>
-            BÊ TRÁP UÔNG BÍ
+            <div class="khung-anh-logo">
+                <img src="Anh/logo-web.png" alt="Logo">
+            </div>
+            <span>BÊ TRÁP<br>UÔNG BÍ</span>
         </a>
 
         <!-- Khối menu điều hướng chính của website -->
@@ -34,17 +35,10 @@
 
         <!-- Khối chứa hotline và nút đặt lịch -->
         <div class="nhom-nut-dau-trang">
-            <span class="hotline">Hotline: 0987.654.321</span>
+            <span class="hotline">Hotline: 0901 234 567</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
         </div>
     </header>
-
-    <!-- Khối banner tiêu đề trang mẫu tráp -->
-    <section class="banner-trang-con">
-        <h1>Bộ Sưu Tập Mẫu Tráp Cưới</h1>
-        <p>Đa dạng phong cách, tinh tế từng chi tiết</p>
-    </section>
-
     <!-- Khối chứa bộ lọc tìm kiếm mẫu tráp -->
     <section class="bo-loc-mau-trap">
         <!-- Tiêu đề bộ lọc -->
@@ -69,28 +63,114 @@
     <section class="danh-sach-mau-trap">
         <!-- Thẻ mẫu tráp 1 -->
         <div class="the-mau-trap">
-            <!-- Khung giữ chỗ cho ảnh mẫu tráp -->
-            <div class="anh-mau-trap-1">Ảnh Tráp Rồng Phượng</div>
-            <h3>Bộ 7 Tráp Rồng Phượng</h3>
+            <div class="anh-mau-trap-1">
+                <img src="Anh/trap-rong-phuong.jpg" alt="Tráp Rồng Phượng">
+            </div>
+            <h3>Bộ 7 Tráp Rồng Phượng Cao Cấp</h3>
             <p class="gia-tham-khao">Từ 4.500.000 VNĐ</p>
-            <!-- Nút gọi hàm mở popup bằng JavaScript -->
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Rồng Phượng', 'anh-mau-trap-1')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Rồng Phượng Cao Cấp', 'Anh/trap-rong-phuong.jpg')">Xem chi tiết</button>
         </div>
         
         <!-- Thẻ mẫu tráp 2 -->
         <div class="the-mau-trap">
-            <div class="anh-mau-trap-2">Ảnh Tráp Hoa Sen</div>
+            <div class="anh-mau-trap-2">
+                <img src="Anh/trap-hoa-sen.jpg" alt="Tráp Hoa Sen">
+            </div>
             <h3>Bộ 5 Tráp Hoa Sen Truyền Thống</h3>
             <p class="gia-tham-khao">Từ 3.200.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hoa Sen', 'anh-mau-trap-2')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hoa Sen Truyền Thống', 'Anh/trap-hoa-sen.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 3 -->
         <div class="the-mau-trap">
-            <div class="anh-mau-trap-3">Ảnh Tráp Hiện Đại</div>
+            <div class="anh-mau-trap-3">
+                <img src="Anh/trap-hien-dai.jpg" alt="Tráp Hiện Đại">
+            </div>
             <h3>Bộ 9 Tráp Hiện Đại Tone Hồng</h3>
             <p class="gia-tham-khao">Từ 5.800.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Tone Hồng', 'anh-mau-trap-3')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Hiện Đại Tone Hồng', 'Anh/trap-hien-dai.jpg')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 4 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-4">
+                <img src="Anh/trap-cuoi-luxury.jpg" alt="Tráp Luxury">
+            </div>
+            <h3>Bộ 11 Tráp Luxury Đặc Biệt</h3>
+            <p class="gia-tham-khao">Từ 7.500.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 11 Tráp Luxury Đặc Biệt', 'Anh/trap-cuoi-luxury.jpg')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 5 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-5">Ảnh Tráp Rồng Phượng 2</div>
+            <h3>Bộ 5 Tráp Rồng Phượng Tiêu Chuẩn</h3>
+            <p class="gia-tham-khao">Từ 3.800.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Rồng Phượng Tiêu Chuẩn', 'anh-mau-trap-5')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 6 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-6">Ảnh Tráp Hoa Sen 2</div>
+            <h3>Bộ 7 Tráp Hoa Sen Mộc Mạc</h3>
+            <p class="gia-tham-khao">Từ 4.200.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Hoa Sen Mộc Mạc', 'anh-mau-trap-6')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 7 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-7">Ảnh Tráp Hiện Đại Tone Xanh</div>
+            <h3>Bộ 5 Tráp Hiện Đại Tone Xanh</h3>
+            <p class="gia-tham-khao">Từ 3.500.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hiện Đại Tone Xanh', 'anh-mau-trap-7')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 8 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-8">Ảnh Tráp Truyền Thống Đỏ</div>
+            <h3>Bộ 9 Tráp Truyền Thống Tone Đỏ</h3>
+            <p class="gia-tham-khao">Từ 5.500.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Truyền Thống Tone Đỏ', 'anh-mau-trap-8')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 9 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-9">Ảnh Tráp Trái Cây Nhập</div>
+            <h3>Tráp Trái Cây Nhập Khẩu Rồng Phượng</h3>
+            <p class="gia-tham-khao">Từ 2.000.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Trái Cây Nhập Khẩu Rồng Phượng', 'anh-mau-trap-9')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 10 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-10">Ảnh Tráp Bánh Phu Thê</div>
+            <h3>Tráp Bánh Phu Thê Xếp Tháp</h3>
+            <p class="gia-tham-khao">Từ 1.200.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Bánh Phu Thê Xếp Tháp', 'anh-mau-trap-10')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 11 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-11">Ảnh Tráp Rượu Ngoại</div>
+            <h3>Tráp Rượu Ngoại & Thuốc Lá Xịn</h3>
+            <p class="gia-tham-khao">Từ 3.000.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Rượu Ngoại & Thuốc Lá Xịn', 'anh-mau-trap-11')">Xem chi tiết</button>
+        </div>
+
+        <!-- Thẻ mẫu tráp 12 -->
+        <div class="the-mau-trap">
+            <div class="anh-mau-trap-12">Ảnh Tráp Lợn Quay</div>
+            <h3>Tráp Heo Sữa Quay Nguyên Con</h3>
+            <p class="gia-tham-khao">Từ 2.500.000 VNĐ</p>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Heo Sữa Quay Nguyên Con', 'anh-mau-trap-12')">Xem chi tiết</button>
+        </div>
+
+        <!-- Khối Phân Trang -->
+        <div class="phan-trang" style="grid-column: 1 / -1; text-align: center; margin-top: 20px;">
+            <span style="display: inline-block; padding: 10px 20px; background-color: #E63946; color: #fff; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 0 5px;">1</span>
+            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">2</span>
+            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">3</span>
+            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">Tiếp &raquo;</span>
         </div>
     </section>
 
@@ -131,7 +211,9 @@
         <!-- Cột 1: Thông tin thương hiệu -->
         <div class="cot-chan-trang">
             <a href="index.html" class="logo-thuong-hieu">
-                <div class="khung-anh-logo-nho">Logo</div> BÊ TRÁP UÔNG BÍ
+                <div class="khung-anh-logo-nho">
+                    <img src="Anh/logo-web.png" alt="Logo">
+                </div> <span>BÊ TRÁP<br>UÔNG BÍ</span>
             </a>
             <p>Dịch vụ cưới hỏi trọn gói chuyên nghiệp hàng đầu tại khu vực Quảng Ninh.</p>
         </div>
@@ -159,8 +241,8 @@
         <div class="cot-chan-trang">
             <h3>Liên Hệ</h3>
             <ul>
-                <li>📍 Địa chỉ: 123 Đường Quang Trung, Uông Bí, Quảng Ninh</li>
-                <li>📞 Hotline: 0987.654.321</li>
+                <li>📍 Địa chỉ: 123 Đường Quang Trung,</br>Uông Bí, Quảng Ninh</li>
+                <li>📞 Hotline: 0901 234 567</li>
                 <li>✉️ Email: lienhe@betrapuongbi.com</li>
             </ul>
         </div>

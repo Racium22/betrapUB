@@ -47,8 +47,7 @@
 }
 
 /* Khung giữ chỗ cho ảnh thư viện */
-.anh-thu-vien-1, .anh-thu-vien-2, .anh-thu-vien-3,
-.anh-thu-vien-4, .anh-thu-vien-5, .anh-thu-vien-6 {
+div[class^="anh-thu-vien-"] {
     height: 300px;
     background-color: #ddd;
     display: flex;

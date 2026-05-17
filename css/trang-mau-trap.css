@@ -48,7 +48,7 @@
 }
 
 /* Khung giữ chỗ cho ảnh mẫu tráp */
-.anh-mau-trap-1, .anh-mau-trap-2, .anh-mau-trap-3 {
+div[class^="anh-mau-trap-"] {
     height: 250px;
     background-color: #ddd;
     border-radius: 8px;

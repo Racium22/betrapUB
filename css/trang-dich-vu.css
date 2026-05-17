@@ -1,18 +1,3 @@
-/* Định dạng banner tiêu đề cho các trang con (Dịch vụ, Mẫu tráp, Liên hệ...) */
-.banner-trang-con {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-/* Định dạng tiêu đề chính của banner trang con */
-.banner-trang-con h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #E63946;
-}
-
 /* Định dạng phần hiển thị từng dịch vụ chi tiết */
 .chi-tiet-dich-vu {
     display: flex;
@@ -29,8 +14,7 @@
 }
 
 /* Khung giữ chỗ cho ảnh dịch vụ trong trang chi tiết */
-.anh-dich-vu-trang-dich-vu-1, .anh-dich-vu-trang-dich-vu-2,
-.anh-dich-vu-trang-dich-vu-3, .anh-dich-vu-trang-dich-vu-4 {
+div[class^="anh-dich-vu-trang-dich-vu-"] {
     flex: 1;
     height: 350px;
     background-color: #ddd;
@@ -78,13 +62,8 @@
         text-align: center;
     }
     
-    .anh-dich-vu-trang-dich-vu-1, .anh-dich-vu-trang-dich-vu-2,
-    .anh-dich-vu-trang-dich-vu-3, .anh-dich-vu-trang-dich-vu-4 {
+    div[class^="anh-dich-vu-trang-dich-vu-"] {
         width: 100%;
         height: 250px;
-    }
-    
-    .banner-trang-con {
-        padding: 50px 20px;
     }
 }

@@ -13,6 +13,34 @@ body {
     line-height: 1.6;
 }
 
+/* --- CẤU HÌNH CHO TẤT CẢ HÌNH ẢNH SAU NÀY --- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cấu hình để ảnh chèn vào khung luôn vừa vặn, không bị tràn hay vỡ bố cục */
+div[class*="khung-anh-"], div[class*="anh-"], div[class*="avatar-"] {
+    overflow: hidden;
+}
+
+div[class*="khung-anh-"] img, 
+div[class*="anh-"] img, 
+div[class*="avatar-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cắt cúp ảnh cho vừa khung */
+    border-radius: inherit; /* Kế thừa viền bo tròn từ khung cha */
+}
+
+/* Riêng logo và icon số liệu thì không cắt xén mà thu nhỏ vừa đủ */
+.khung-anh-logo img,
+.khung-anh-logo-nho img,
+.khung-anh-so-lieu img {
+    object-fit: contain;
+}
+/* --------------------------------------------- */
+
 /* Định dạng phần đầu trang (Header) cố định */
 .dau-trang {
     position: sticky;
@@ -33,9 +61,14 @@ body {
     align-items: center;
     gap: 10px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px; /* Chữ nhỏ lại một chút để vừa 2 dòng */
     color: #E63946;
     text-decoration: none;
+}
+
+.logo-thuong-hieu span {
+    display: inline-block;
+    line-height: 1.2;
 }
 
 /* Định dạng khung giữ chỗ cho ảnh logo */
@@ -78,15 +111,20 @@ body {
 
 /* Định dạng các đường link trong menu */
 .thanh-menu-dieu-huong a {
+    display: inline-block;
+    white-space: nowrap;
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 /* Hiệu ứng di chuột vào đường link trong menu */
 .thanh-menu-dieu-huong a:hover {
-    color: #E63946;
+    color: #fff;
+    background-color: #E63946;
 }
 
 /* Định dạng nhóm nút bên phải header */
@@ -100,6 +138,7 @@ body {
 .hotline {
     font-weight: bold;
     color: #d32f2f;
+    white-space: nowrap; /* Ngăn bẻ dòng */
 }
 
 /* Định dạng nút đặt lịch chung */
@@ -113,6 +152,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Ngăn bẻ dòng */
 }
 
 /* Hiệu ứng di chuột vào nút đặt lịch */
@@ -126,7 +166,7 @@ body {
     color: #fff;
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr; /* Nới rộng cột 4 chứa Liên hệ để không rớt dòng email */
     gap: 30px;
 }
 

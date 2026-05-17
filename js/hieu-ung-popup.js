@@ -6,13 +6,18 @@ const tieuDePopup = document.getElementById("tieu-de-popup");
 const anhPopup = document.getElementById("anh-popup-hien-thi");
 
 // Hàm mở popup xem chi tiết mẫu tráp, nhận vào tên tráp và tên lớp ảnh giữ chỗ
-function moPopup(tenTrap, tenLopAnh) {
+function moPopup(tenTrap, urlHoacTenClass) {
     // Nếu các đối tượng tồn tại thì mới xử lý
     if (lopPhuPopup && tieuDePopup && anhPopup) {
         // Cập nhật tiêu đề popup bằng tên tráp được truyền vào
         tieuDePopup.innerText = tenTrap;
-        // Cập nhật chữ trong khung ảnh giữ chỗ
-        anhPopup.innerText = "Ảnh chi tiết " + tenTrap;
+        // Kiểm tra xem tham số thứ 2 có phải là đường dẫn ảnh không
+        if (urlHoacTenClass && (urlHoacTenClass.includes('/') || urlHoacTenClass.includes('.'))) {
+            anhPopup.innerHTML = '<img src="' + urlHoacTenClass + '" style="width:100%; height:100%; object-fit:contain; border-radius:inherit;">';
+        } else {
+            // Cập nhật chữ trong khung ảnh giữ chỗ
+            anhPopup.innerText = "Ảnh chi tiết " + tenTrap;
+        }
         // Chuyển display từ none sang flex để hiển thị popup
         lopPhuPopup.style.display = "flex";
     }
@@ -42,10 +47,15 @@ const khungAnhLon = document.getElementById("khung-anh-lon-hien-thi");
 const tieuDeAnhLon = document.getElementById("tieu-de-anh-lon");
 
 // Hàm mở popup xem ảnh lớn
-function moPopupAnh(tieuDe) {
+function moPopupAnh(tieuDe, urlAnh) {
     if (lopPhuPopupAnh && khungAnhLon && tieuDeAnhLon) {
-        // Cập nhật chữ trong khung giữ chỗ ảnh lớn
-        khungAnhLon.innerText = tieuDe + " (Kích thước lớn)";
+        if (urlAnh) {
+            // Nếu có đường dẫn ảnh, tạo thẻ img để hiển thị
+            khungAnhLon.innerHTML = '<img src="' + urlAnh + '" style="width:100%; height:100%; object-fit:contain; border-radius:inherit;">';
+        } else {
+            // Nếu không có, hiển thị chữ
+            khungAnhLon.innerText = tieuDe + " (Kích thước lớn)";
+        }
         // Cập nhật tiêu đề bên dưới ảnh
         tieuDeAnhLon.innerText = tieuDe;
         // Hiển thị popup

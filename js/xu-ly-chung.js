@@ -52,3 +52,23 @@ if (nutTruoc && nutSau) {
         hienThiDanhGia(viTriHienTai);
     });
 }
+
+// Xử lý hiệu ứng slider cho ảnh nền trang chủ (Banner)
+const danhSachAnhBanner = document.querySelectorAll(".anh-nen-slider");
+const sliderNen = document.querySelector(".slider-nen");
+
+if (danhSachAnhBanner.length > 0 && sliderNen) {
+    let chiSoBannerHienTai = 0;
+    
+    // Đặt bộ đếm thời gian tự động chuyển đổi mỗi 3 giây (3000ms)
+    setInterval(function() {
+        chiSoBannerHienTai++;
+        // Nếu vượt quá số lượng ảnh thì quay về ảnh đầu tiên
+        if (chiSoBannerHienTai >= danhSachAnhBanner.length) {
+            chiSoBannerHienTai = 0;
+        }
+        
+        // Kéo slider sang trái bằng thuộc tính transform
+        sliderNen.style.transform = `translateX(-${chiSoBannerHienTai * 100}%)`;
+    }, 3000);
+}

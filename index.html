@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,17 @@
     <!-- Nhúng file CSS riêng của trang chủ -->
     <link rel="stylesheet" href="css/trang-chu.css">
 </head>
+
 <body>
 
     <!-- Khối đầu trang (Header) cố định -->
     <header class="dau-trang" id="dau-trang-chinh">
         <!-- Khối chứa logo thương hiệu -->
         <a href="index.html" class="logo-thuong-hieu">
-            <div class="khung-anh-logo">Ảnh Logo</div>
-            BÊ TRÁP UÔNG BÍ
+            <div class="khung-anh-logo">
+                <img src="Anh/logo-web.png" alt="Logo">
+            </div>
+            <span>BÊ TRÁP<br>UÔNG BÍ</span>
         </a>
 
         <!-- Khối menu điều hướng chính của website -->
@@ -32,17 +36,27 @@
 
         <!-- Khối chứa hotline và nút đặt lịch -->
         <div class="nhom-nut-dau-trang">
-            <span class="hotline">Hotline: 0987.654.321</span>
+            <span class="hotline">Hotline: 0901 234 567</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
         </div>
     </header>
 
     <!-- Khối Hero Banner chính -->
     <section class="hero-banner">
+        <!-- Khối chứa ảnh nền tự động chuyển -->
+        <div class="slider-nen">
+            <img src="Anh/be-trap-nam.jpg" class="anh-nen-slider active" alt="Banner 1">
+            <img src="Anh/be-trap-nu.jpg" class="anh-nen-slider" alt="Banner 2">
+            <img src="Anh/trap-cuoi-luxury.jpg" class="anh-nen-slider" alt="Banner 3">
+            <img src="Anh/trang-tri-gia-tien.jpg" class="anh-nen-slider" alt="Banner 4">
+            <img src="Anh/anh-xe-hoa.png" class="anh-nen-slider" alt="Banner 5">
+        </div>
+        <!-- Lớp phủ mờ để làm nổi bật chữ -->
+        <div class="lop-phu-banner"></div>
         <!-- Nội dung của banner -->
         <div class="noi-dung-banner">
-            <h1>Dịch Vụ Bê Tráp Chuyên Nghiệp Tại Uông Bí</h1>
-            <p>Trọn gói - Sang trọng - Tận tâm. Đồng hành cùng ngày vui của bạn!</p>
+            <h1>Trọn Vẹn Nghi Lễ — Gắn Kết Trăm Năm</h1>
+            <p>Dịch Vụ Bê Tráp Chuyên Nghiệp Hàng Đầu Uông Bí</p>
             <!-- Khối chứa thanh tìm kiếm -->
             <div class="thanh-tim-kiem">
                 <input type="text" placeholder="Tìm kiếm dịch vụ...">
@@ -60,21 +74,33 @@
     <section class="so-lieu-noi-bat">
         <!-- Thẻ số liệu 1 -->
         <div class="the-so-lieu">
+            <div class="khung-anh-so-lieu">
+                <img src="Anh/trai-tim-hy-su.png">
+            </div>
             <h3>500+</h3>
             <p>Đám cưới đã phục vụ</p>
         </div>
         <!-- Thẻ số liệu 2 -->
         <div class="the-so-lieu">
+            <div class="khung-anh-so-lieu">
+                <img src="Anh/ngoi-sao.png">
+            </div>
             <h3>4.9/5</h3>
             <p>Đánh giá hài lòng</p>
         </div>
         <!-- Thẻ số liệu 3 -->
         <div class="the-so-lieu">
+            <div class="khung-anh-so-lieu">
+                <img src="Anh/5-nam.png">
+            </div>
             <h3>5 Năm</h3>
             <p>Kinh nghiệm</p>
         </div>
         <!-- Thẻ số liệu 4 -->
         <div class="the-so-lieu">
+            <div class="khung-anh-so-lieu">
+                <img src="Anh/ghim-ban-do.png">
+            </div>
             <h3>Toàn tỉnh</h3>
             <p>Phục vụ Quảng Ninh</p>
         </div>
@@ -88,42 +114,54 @@
             <!-- Thẻ dịch vụ 1 -->
             <div class="the-dich-vu">
                 <!-- Khung giữ chỗ cho ảnh dịch vụ -->
-                <div class="anh-dich-vu-trang-chu-1">Ảnh Bê Tráp Nam</div>
+                <div class="anh-dich-vu-trang-chu-1">
+                    <img src="Anh/be-trap-nam.jpg" alt="Bê Tráp Nam">
+                </div>
                 <h3>Bê Tráp Nam</h3>
                 <p>Đội hình nam chuẩn, trang phục vest/áo dài truyền thống.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
             </div>
             <!-- Thẻ dịch vụ 2 -->
             <div class="the-dich-vu">
-                <div class="anh-dich-vu-trang-chu-2">Ảnh Bê Tráp Nữ</div>
+                <div class="anh-dich-vu-trang-chu-2">
+                    <img src="Anh/be-trap-nu.jpg" alt="Bê Tráp Nữ">
+                </div>
                 <h3>Bê Tráp Nữ</h3>
                 <p>Đội hình nữ xinh đẹp, áo dài đồng bộ sang trọng.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
             </div>
             <!-- Thẻ dịch vụ 3 -->
             <div class="the-dich-vu">
-                <div class="anh-dich-vu-trang-chu-3">Ảnh Tráp Cưới Luxury</div>
+                <div class="anh-dich-vu-trang-chu-3">
+                    <img src="Anh/trap-cuoi-luxury.jpg" alt="Tráp Cưới Luxury">
+                </div>
                 <h3>Tráp Cưới Luxury</h3>
                 <p>Mẫu tráp cưới cao cấp, hoa tươi nhập khẩu.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
             </div>
             <!-- Thẻ dịch vụ 4 -->
             <div class="the-dich-vu">
-                <div class="anh-dich-vu-trang-chu-4">Ảnh Xe Hoa</div>
+                <div class="anh-dich-vu-trang-chu-4">
+                    <img src="Anh/anh-xe-hoa.png" alt="Cho Thuê Xe Hoa">
+                </div>
                 <h3>Cho Thuê Xe Hoa</h3>
                 <p>Các dòng xe sang trọng, trang trí hoa tươi đẳng cấp.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
             </div>
             <!-- Thẻ dịch vụ 5 -->
             <div class="the-dich-vu">
-                <div class="anh-dich-vu-trang-chu-5">Ảnh Trang Trí Gia Tiên</div>
+                <div class="anh-dich-vu-trang-chu-5">
+                    <img src="Anh/trang-tri-gia-tien.jpg" alt="Trang Trí Gia Tiên">
+                </div>
                 <h3>Trang Trí Gia Tiên</h3>
                 <p>Gói trang trí bàn gia tiên, cổng hoa theo nhiều concept.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
             </div>
             <!-- Thẻ dịch vụ 6 -->
             <div class="the-dich-vu">
-                <div class="anh-dich-vu-trang-chu-6">Ảnh Combo Trọn Gói</div>
+                <div class="anh-dich-vu-trang-chu-6">
+                    <img src="Anh/logo-4-3.png" alt="Combo Trọn Gói">
+                </div>
                 <h3>Combo Trọn Gói</h3>
                 <p>Tiết kiệm chi phí với gói dịch vụ cưới hỏi toàn diện.</p>
                 <a href="dich-vu.html" class="nut-xem-chi-tiet">Xem chi tiết</a>
@@ -169,12 +207,16 @@
         <!-- Cột hình ảnh bên trái -->
         <div class="cot-hinh-anh">
             <!-- Khung giữ chỗ cho ảnh giới thiệu -->
-            <div class="anh-gioi-thieu-trang-chu">Ảnh thực tế đội ngũ</div>
+            <div class="anh-gioi-thieu-trang-chu">
+                <img src="Anh/mot-doi.png">
+            </div>
         </div>
         <!-- Cột nội dung bên phải -->
         <div class="cot-noi-dung">
             <h2>Về Bê Tráp Uông Bí</h2>
-            <p>Chúng tôi tự hào là đơn vị cung cấp dịch vụ cưới hỏi hàng đầu tại khu vực Uông Bí và Quảng Ninh. Với đội ngũ trẻ trung, nhiệt huyết và chuyên nghiệp, chúng tôi cam kết mang lại sự hoàn hảo cho ngày trọng đại của bạn.</p>
+            <p>Chúng tôi tự hào là đơn vị cung cấp dịch vụ cưới hỏi hàng đầu tại khu vực Uông Bí và Quảng Ninh. Với đội
+                ngũ trẻ trung, nhiệt huyết và chuyên nghiệp, chúng tôi cam kết mang lại sự hoàn hảo cho ngày trọng đại
+                của bạn.</p>
             <ul>
                 <li>Đội hình trai xinh gái đẹp, ngoại hình đồng đều.</li>
                 <li>Trang phục đa dạng, cập nhật xu hướng mới nhất.</li>
@@ -192,17 +234,31 @@
             <!-- Thẻ đánh giá 1 -->
             <div class="the-danh-gia">
                 <!-- Khung giữ chỗ cho avatar khách hàng -->
-                <div class="avatar-khach-hang-1">Avatar</div>
+                <div class="avatar-khach-hang-1">
+                    <img src="Anh/nhan-xet-1.jpg">
+                </div>
                 <h4>Nguyễn Văn A</h4>
                 <div class="sao-danh-gia">⭐⭐⭐⭐⭐</div>
-                <p>"Dịch vụ rất chuyên nghiệp, đội hình bê tráp nhiệt tình và đúng giờ. Gia đình tôi rất hài lòng!"</p>
+                <p>"Dịch vụ rất chuyên nghiệp, đội hình bê tráp nhiệt tình và đúng giờ</br>Gia đình tôi rất hài lòng!"
+                </p>
             </div>
             <!-- Thẻ đánh giá 2 (bị ẩn tạm thời bởi JS) -->
             <div class="the-danh-gia" style="display:none;">
-                <div class="avatar-khach-hang-2">Avatar</div>
+                <div class="avatar-khach-hang-2">
+                    <img src="Anh/nhan-xet-2.jpg">
+                </div>
                 <h4>Trần Thị B</h4>
                 <div class="sao-danh-gia">⭐⭐⭐⭐⭐</div>
-                <p>"Mẫu tráp cưới rất đẹp, hoa tươi và trang trí tinh tế. Cảm ơn Bê Tráp Uông Bí rất nhiều!"</p>
+                <p>"Mẫu tráp cưới rất đẹp, hoa tươi và trang trí tinh tế.</br>Cảm ơn Bê Tráp Uông Bí rất nhiều!"</p>
+            </div>
+            <!-- Thẻ đánh giá 3 (bị ẩn tạm thời bởi JS) -->
+            <div class="the-danh-gia" style="display:none;">
+                <div class="avatar-khach-hang-3">
+                    <img src="Anh/nhan-xet-3.jpg">
+                </div>
+                <h4>Hoàng Văn C</h4>
+                <div class="sao-danh-gia">⭐⭐⭐⭐⭐</div>
+                <p>"Rất hài lòng với dịch vụ của Bê Tráp Uông Bí.</br>Đội hình chuyên nghiệp và nhiệt tình."</p>
             </div>
         </div>
         <!-- Các nút điều khiển thanh trượt -->
@@ -217,7 +273,7 @@
         <h2>Sẵn Sàng Cho Ngày Cưới Hoàn Hảo Của Bạn?</h2>
         <p>Liên hệ ngay để nhận báo giá chi tiết và ưu đãi tốt nhất.</p>
         <div class="nhom-nut-cta">
-            <span class="hotline-cta">Hotline: 0987.654.321</span>
+            <span class="hotline-cta">Hotline: 0901 234 567</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH NGAY</a>
             <a href="lien-he.html" class="nut-nhan-tu-van">NHẬN TƯ VẤN</a>
         </div>
@@ -228,7 +284,9 @@
         <!-- Cột 1: Thông tin thương hiệu -->
         <div class="cot-chan-trang">
             <a href="index.html" class="logo-thuong-hieu">
-                <div class="khung-anh-logo-nho">Logo</div> BÊ TRÁP UÔNG BÍ
+                <div class="khung-anh-logo-nho">
+                    <img src="Anh/logo-web.png" alt="Logo">
+                </div> <span>BÊ TRÁP<br>UÔNG BÍ</span>
             </a>
             <p>Dịch vụ cưới hỏi trọn gói chuyên nghiệp hàng đầu tại khu vực Quảng Ninh.</p>
         </div>
@@ -256,8 +314,8 @@
         <div class="cot-chan-trang">
             <h3>Liên Hệ</h3>
             <ul>
-                <li>📍 Địa chỉ: 123 Đường Quang Trung, Uông Bí, Quảng Ninh</li>
-                <li>📞 Hotline: 0987.654.321</li>
+                <li>📍 Địa chỉ: 123 Đường Quang Trung,</br>Uông Bí, Quảng Ninh</li>
+                <li>📞 Hotline: 0901 234 567</li>
                 <li>✉️ Email: lienhe@betrapuongbi.com</li>
             </ul>
         </div>
@@ -266,4 +324,5 @@
     <!-- Nhúng file JavaScript xử lý chung -->
     <script src="js/xu-ly-chung.js"></script>
 </body>
+
 </html>

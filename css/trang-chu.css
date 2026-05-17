@@ -1,5 +1,6 @@
 /* Định dạng phần Hero Banner */
 .hero-banner {
+    position: relative;
     height: 80vh;
     background-color: #eee;
     display: flex;
@@ -7,19 +8,56 @@
     align-items: center;
     text-align: center;
     padding: 20px;
+    overflow: hidden;
+}
+
+/* Các lớp CSS cho slider nền banner */
+.slider-nen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.anh-nen-slider {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lop-phu-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ đen mờ 50% */
+    z-index: 2;
 }
 
 /* Định dạng nội dung bên trong Hero Banner */
+.noi-dung-banner {
+    position: relative;
+    z-index: 3;
+}
+
 .noi-dung-banner h1 {
     font-size: 3em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng chữ để dễ đọc hơn */
 }
 
 /* Định dạng đoạn văn mô tả trong banner */
 .noi-dung-banner p {
     font-size: 1.2em;
+    color: #fff;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Định dạng khu vực thanh tìm kiếm trong banner */
@@ -58,9 +96,9 @@
 /* Định dạng nút xem dịch vụ */
 .nut-xem-dich-vu {
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: #fff;
     color: #333;
-    border: 2px solid #333;
+    border: 2px solid #fff;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -69,8 +107,9 @@
 
 /* Hiệu ứng khi di chuột vào nút xem dịch vụ */
 .nut-xem-dich-vu:hover {
-    background-color: #333;
+    background-color: #E63946;
     color: #fff;
+    border-color: #E63946;
 }
 
 /* Định dạng khu vực số liệu nổi bật */
@@ -84,6 +123,20 @@
 /* Định dạng từng thẻ số liệu */
 .the-so-lieu {
     text-align: center;
+}
+
+/* Khung giữ chỗ cho ảnh/icon số liệu */
+.khung-anh-so-lieu {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 14px;
 }
 
 /* Định dạng con số nổi bật */
@@ -114,19 +167,23 @@
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hiệu ứng khi di chuột vào thẻ dịch vụ */
 .the-dich-vu:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Khung giữ chỗ cho ảnh dịch vụ (dùng chung cho 6 ảnh) */
-.anh-dich-vu-trang-chu-1, .anh-dich-vu-trang-chu-2, .anh-dich-vu-trang-chu-3,
-.anh-dich-vu-trang-chu-4, .anh-dich-vu-trang-chu-5, .anh-dich-vu-trang-chu-6 {
+.anh-dich-vu-trang-chu-1,
+.anh-dich-vu-trang-chu-2,
+.anh-dich-vu-trang-chu-3,
+.anh-dich-vu-trang-chu-4,
+.anh-dich-vu-trang-chu-5,
+.anh-dich-vu-trang-chu-6 {
     height: 200px;
     background-color: #ddd;
     border-radius: 8px;
@@ -156,12 +213,15 @@
     color: #333;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 /* Hiệu ứng khi di chuột vào nút xem chi tiết */
 .nut-xem-chi-tiet:hover {
-    background-color: #ddd;
+    background-color: #E63946;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(230, 57, 70, 0.4);
 }
 
 /* Định dạng khu vực quy trình đặt dịch vụ */
@@ -299,7 +359,9 @@
 }
 
 /* Khung giữ chỗ cho avatar khách hàng */
-.avatar-khach-hang-1, .avatar-khach-hang-2 {
+.avatar-khach-hang-1,
+.avatar-khach-hang-2,
+.avatar-khach-hang-3 {
     width: 80px;
     height: 80px;
     background-color: #ddd;
@@ -342,7 +404,7 @@
 
 /* Định dạng khu vực kêu gọi hành động cuối trang (CTA) */
 .cta-cuoi-trang {
-    background-color: #E63946;
+    background-color: #8C7456;
     color: #fff;
     text-align: center;
     padding: 50px;
@@ -401,12 +463,12 @@
         grid-template-columns: repeat(2, 1fr);
         padding: 0 20px 30px;
     }
-    
+
     .gioi-thieu-thuong-hieu {
         flex-direction: column;
         padding: 30px 20px;
     }
-    
+
     .so-lieu-noi-bat {
         flex-wrap: wrap;
         gap: 30px;
@@ -420,41 +482,41 @@
         height: auto;
         padding: 50px 20px;
     }
-    
+
     .noi-dung-banner h1 {
         font-size: 2em;
     }
-    
+
     .thanh-tim-kiem {
         flex-direction: column;
     }
-    
+
     .thanh-tim-kiem input {
         width: 100%;
     }
-    
+
     .nhom-nut-banner {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .the-so-lieu {
         width: 45%;
     }
-    
+
     .luoi-dich-vu {
         grid-template-columns: 1fr;
     }
-    
+
     .danh-sach-buoc {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .danh-sach-buoc::before {
-        display: none; 
+        display: none;
     }
-    
+
     .nhom-nut-cta {
         flex-direction: column;
     }
