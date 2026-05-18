@@ -26,7 +26,7 @@
         <!-- Khối menu điều hướng chính của website -->
         <nav>
             <ul class="thanh-menu-dieu-huong">
-                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
                 <li><a href="dich-vu.html">Dịch vụ</a></li>
                 <li><a href="mau-trap.html">Mẫu tráp</a></li>
                 <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
@@ -36,7 +36,7 @@
 
         <!-- Khối chứa hotline và nút đặt lịch -->
         <div class="nhom-nut-dau-trang">
-            <span class="hotline">Hotline: 0901 234 567</span>
+            <span class="hotline">Hotline: 0868291585</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
         </div>
     </header>
@@ -57,15 +57,10 @@
         <div class="noi-dung-banner">
             <h1>Trọn Vẹn Nghi Lễ — Gắn Kết Trăm Năm</h1>
             <p>Dịch Vụ Bê Tráp Chuyên Nghiệp Hàng Đầu Uông Bí</p>
-            <!-- Khối chứa thanh tìm kiếm -->
-            <div class="thanh-tim-kiem">
-                <input type="text" placeholder="Tìm kiếm dịch vụ...">
-                <button>Tìm kiếm</button>
-            </div>
             <!-- Khối chứa các nút hành động (CTA) -->
             <div class="nhom-nut-banner">
                 <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH NGAY</a>
-                <a href="dich-vu.html" class="nut-xem-dich-vu">XEM DỊCH VỤ</a>
+                <a href="mau-trap.html" class="nut-xem-dich-vu">XEM MẪU TRAP</a>
             </div>
         </div>
     </section>
@@ -103,6 +98,14 @@
             </div>
             <h3>Toàn tỉnh</h3>
             <p>Phục vụ Quảng Ninh</p>
+        </div>
+    </section>
+
+    <!-- Khối tìm kiếm dịch vụ độc lập -->
+    <section class="khu-vuc-tim-kiem-doc-lap">
+        <div class="thanh-tim-kiem">
+            <input type="text" placeholder="Bạn đang tìm kiếm dịch vụ gì?">
+            <button>Tìm kiếm</button>
         </div>
     </section>
 
@@ -177,27 +180,27 @@
             <!-- Bước 1 -->
             <div class="buoc">
                 <div class="vong-tron-buoc">1</div>
-                <h4>Tư vấn</h4>
+                <h2>Tư vấn</h2>
             </div>
             <!-- Bước 2 -->
             <div class="buoc">
                 <div class="vong-tron-buoc">2</div>
-                <h4>Chọn dịch vụ</h4>
+                <h2>Chọn dịch vụ</h2>
             </div>
             <!-- Bước 3 -->
             <div class="buoc">
                 <div class="vong-tron-buoc">3</div>
-                <h4>Đặt lịch</h4>
+                <h2>Đặt lịch</h2>
             </div>
             <!-- Bước 4 -->
             <div class="buoc">
                 <div class="vong-tron-buoc">4</div>
-                <h4>Chuẩn bị</h4>
+                <h2>Chuẩn bị</h2>
             </div>
             <!-- Bước 5 -->
             <div class="buoc">
                 <div class="vong-tron-buoc">5</div>
-                <h4>Tổ chức lễ</h4>
+                <h2>Tổ chức lễ</h2>
             </div>
         </div>
     </section>
@@ -243,7 +246,7 @@
                 </p>
             </div>
             <!-- Thẻ đánh giá 2 (bị ẩn tạm thời bởi JS) -->
-            <div class="the-danh-gia" style="display:none;">
+            <div class="the-danh-gia an-phan-tu">
                 <div class="avatar-khach-hang-2">
                     <img src="Anh/nhan-xet-2.jpg">
                 </div>
@@ -252,7 +255,7 @@
                 <p>"Mẫu tráp cưới rất đẹp, hoa tươi và trang trí tinh tế.</br>Cảm ơn Bê Tráp Uông Bí rất nhiều!"</p>
             </div>
             <!-- Thẻ đánh giá 3 (bị ẩn tạm thời bởi JS) -->
-            <div class="the-danh-gia" style="display:none;">
+            <div class="the-danh-gia an-phan-tu">
                 <div class="avatar-khach-hang-3">
                     <img src="Anh/nhan-xet-3.jpg">
                 </div>
@@ -273,9 +276,9 @@
         <h2>Sẵn Sàng Cho Ngày Cưới Hoàn Hảo Của Bạn?</h2>
         <p>Liên hệ ngay để nhận báo giá chi tiết và ưu đãi tốt nhất.</p>
         <div class="nhom-nut-cta">
-            <span class="hotline-cta">Hotline: 0901 234 567</span>
+            <span class="hotline-cta">Hotline: 0868291585</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH NGAY</a>
-            <a href="lien-he.html" class="nut-nhan-tu-van">NHẬN TƯ VẤN</a>
+            <!-- <a href="lien-he.html" class="nut-nhan-tu-van">NHẬN TƯ VẤN</a> -->
         </div>
     </section>
 
@@ -314,9 +317,9 @@
         <div class="cot-chan-trang">
             <h3>Liên Hệ</h3>
             <ul>
-                <li>📍 Địa chỉ: 123 Đường Quang Trung,</br>Uông Bí, Quảng Ninh</li>
-                <li>📞 Hotline: 0901 234 567</li>
-                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+
+                <li>📞 Hotline: 0868291585</li>
+                <li>✉️ Email: phamthingochuyen06zs@gmail.com</li>
             </ul>
         </div>
     </footer>

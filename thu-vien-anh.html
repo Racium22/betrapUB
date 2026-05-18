@@ -28,14 +28,14 @@
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="dich-vu.html">Dịch vụ</a></li>
                 <li><a href="mau-trap.html">Mẫu tráp</a></li>
-                <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
+                <li><a href="thu-vien-anh.html" class="active">Thư viện ảnh</a></li>
                 <li><a href="lien-he.html">Liên hệ</a></li>
             </ul>
         </nav>
 
         <!-- Khối chứa hotline và nút đặt lịch -->
         <div class="nhom-nut-dau-trang">
-            <span class="hotline">Hotline: 0901 234 567</span>
+            <span class="hotline">Hotline: 0868291585</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
         </div>
     </header>
@@ -55,102 +55,132 @@
 
     <!-- Khối lưới chứa ảnh -->
     <section class="luoi-thu-vien-anh">
-        <div class="khung-anh" onclick="moPopupAnh('Đội Hình Bê Tráp Nam', 'Anh/be-trap-nam.jpg')">
+        <div class="khung-anh be-trap-nam" onclick="moPopupAnh('Đội Hình Bê Tráp Nam', 'Anh/be-trap-nam.jpg')">
             <div class="anh-thu-vien-1"><img src="Anh/be-trap-nam.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Đội Hình Bê Tráp Nữ', 'Anh/be-trap-nu.jpg')">
+        <div class="khung-anh be-trap-nu" onclick="moPopupAnh('Đội Hình Bê Tráp Nữ', 'Anh/be-trap-nu.jpg')">
             <div class="anh-thu-vien-2"><img src="Anh/be-trap-nu.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Tráp Cưới Rồng Phượng', 'Anh/trap-rong-phuong.jpg')">
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp Cưới Rồng Phượng', 'Anh/trap-rong-phuong.jpg')">
             <div class="anh-thu-vien-3"><img src="Anh/trap-rong-phuong.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Xe Hoa Cưới', 'Anh/anh-xe-hoa.png')">
+        <div class="khung-anh xe-hoa" onclick="moPopupAnh('Xe Hoa Cưới', 'Anh/anh-xe-hoa.png')">
             <div class="anh-thu-vien-4"><img src="Anh/anh-xe-hoa.png"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Cổng Hoa Gia Tiên', 'Anh/trang-tri-gia-tien.jpg')">
+        <div class="khung-anh gia-tien" onclick="moPopupAnh('Cổng Hoa Gia Tiên', 'Anh/trang-tri-gia-tien.jpg')">
             <div class="anh-thu-vien-5"><img src="Anh/trang-tri-gia-tien.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Thực Tế Nhà Trai')">
-            <div class="anh-thu-vien-6">Ảnh Thực Tế Nhà Trai</div>
+        <div class="khung-anh trap" onclick="moPopupAnh('Thực Tế Nhà Trai', 'Anh/be-trap-01.jpg')">
+            <div class="anh-thu-vien-6"><img src="Anh/be-trap-01.jpg" alt="Nhà trai"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Tráp Hoa Sen', 'Anh/trap-hoa-sen.jpg')">
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp Hoa Sen', 'Anh/trap-hoa-sen.jpg')">
             <div class="anh-thu-vien-7"><img src="Anh/trap-hoa-sen.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Tráp Hiện Đại', 'Anh/trap-hien-dai.jpg')">
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp Hiện Đại', 'Anh/trap-hien-dai.jpg')">
             <div class="anh-thu-vien-8"><img src="Anh/trap-hien-dai.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Tráp Cưới Luxury', 'Anh/trap-cuoi-luxury.jpg')">
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp Cưới Luxury', 'Anh/trap-cuoi-luxury.jpg')">
             <div class="anh-thu-vien-9"><img src="Anh/trap-cuoi-luxury.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Lễ Ăn Hỏi 1')">
-            <div class="anh-thu-vien-10">Ảnh Lễ Ăn Hỏi 1</div>
+        <div class="khung-anh be-trap-nam" onclick="moPopupAnh('Lễ Ăn Hỏi 1', 'Anh/be-trap-nam-01.jpg')">
+            <div class="anh-thu-vien-10"><img src="Anh/be-trap-nam-01.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Đội Hình Tráp Đỏ')">
-            <div class="anh-thu-vien-11">Ảnh Đội Hình Tráp Đỏ</div>
+        <div class="khung-anh be-trap-nu" onclick="moPopupAnh('Đội Hình Tráp Nữ', 'Anh/be-trap-nu-01.jpg')">
+            <div class="anh-thu-vien-11"><img src="Anh/be-trap-nu-01.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Gia Tiên Tone Vàng')">
-            <div class="anh-thu-vien-12">Ảnh Gia Tiên Tone Vàng</div>
+        <div class="khung-anh be-trap-nu" onclick="moPopupAnh('Gia Tiên Tone Vàng', 'Anh/be-trap-nu-02.jpg')">
+            <div class="anh-thu-vien-12"><img src="Anh/be-trap-nu-02.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Tráp Trái Cây Nhập')">
-            <div class="anh-thu-vien-13">Ảnh Tráp Trái Cây</div>
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 01', 'Anh/trap-01.jpg')">
+            <div class="anh-thu-vien-13"><img src="Anh/trap-01.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Xe Hoa Mui Trần')">
-            <div class="anh-thu-vien-14">Ảnh Xe Hoa Mui Trần</div>
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 02', 'Anh/trap-02.jpg')">
+            <div class="anh-thu-vien-14"><img src="Anh/trap-02.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Đón Dâu 1')">
-            <div class="anh-thu-vien-15">Ảnh Đón Dâu 1</div>
+        <div class="khung-anh be-trap" onclick="moPopupAnh('Bê tráp', 'Anh/be-trap-02.jpg')">
+            <div class="anh-thu-vien-15"><img src="Anh/be-trap-02.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Khách Hàng Khen Ngợi')">
-            <div class="anh-thu-vien-16">Ảnh Khách Hàng 1</div>
+        <div class="khung-anh be-trap" onclick="moPopupAnh('Bê tráp 03', 'Anh/be-trap-03.jpg')">
+            <div class="anh-thu-vien-16"><img src="Anh/be-trap-03.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Khách Hàng 2')">
-            <div class="anh-thu-vien-17">Ảnh Khách Hàng 2</div>
+        <div class="khung-anh be-trap" onclick="moPopupAnh('Bê tráp 04', 'Anh/be-trap-04.jpg')">
+            <div class="anh-thu-vien-17"><img src="Anh/be-trap-04.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
 
-        <div class="khung-anh" onclick="moPopupAnh('Khách Hàng 3')">
-            <div class="anh-thu-vien-18">Ảnh Khách Hàng 3</div>
+        <div class="khung-anh be-trap" onclick="moPopupAnh('Bê tráp 05', 'Anh/be-trap-05.jpg')">
+            <div class="anh-thu-vien-18"><img src="Anh/be-trap-05.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 03', 'Anh/trap-03.jpg')">
+            <div class="anh-thu-vien-19"><img src="Anh/trap-03.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 04', 'Anh/trap-04.jpg')">
+            <div class="anh-thu-vien-20"><img src="Anh/trap-04.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 05', 'Anh/trap-05.jpg')">
+            <div class="anh-thu-vien-21"><img src="Anh/trap-05.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 06', 'Anh/trap-06.jpg')">
+            <div class="anh-thu-vien-22"><img src="Anh/trap-06.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 07', 'Anh/trap-07.jpg')">
+            <div class="anh-thu-vien-23"><img src="Anh/trap-07.jpg"></div>
+            <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
+        </div>
+
+        <div class="khung-anh trap" onclick="moPopupAnh('Tráp 08', 'Anh/trap-08.jpg')">
+            <div class="anh-thu-vien-24"><img src="Anh/trap-08.jpg"></div>
             <div class="lop-mo-anh"><span>Xem ảnh lớn</span></div>
         </div>
         
         <!-- Khối Phân Trang -->
-        <div class="phan-trang" style="grid-column: 1 / -1; text-align: center; margin-top: 20px;">
-            <span style="display: inline-block; padding: 10px 20px; background-color: #E63946; color: #fff; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 0 5px;">1</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">2</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">3</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">Tiếp &raquo;</span>
+        <div class="phan-trang">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>Tiếp &raquo;</span>
         </div>
     </section>
 
@@ -198,9 +228,9 @@
         <div class="cot-chan-trang">
             <h3>Liên Hệ</h3>
             <ul>
-                <li>📍 Địa chỉ: 123 Đường Quang Trung,</br>Uông Bí, Quảng Ninh</li>
-                <li>📞 Hotline: 0901 234 567</li>
-                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+
+                <li>📞 Hotline: 0868291585</li>
+                <li>✉️ Email: phamthingochuyen06zs@gmail.com</li>
             </ul>
         </div>
     </footer>

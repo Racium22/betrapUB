@@ -13,7 +13,7 @@ function moPopup(tenTrap, urlHoacTenClass) {
         tieuDePopup.innerText = tenTrap;
         // Kiểm tra xem tham số thứ 2 có phải là đường dẫn ảnh không
         if (urlHoacTenClass && (urlHoacTenClass.includes('/') || urlHoacTenClass.includes('.'))) {
-            anhPopup.innerHTML = '<img src="' + urlHoacTenClass + '" style="width:100%; height:100%; object-fit:contain; border-radius:inherit;">';
+            anhPopup.innerHTML = '<img src="' + urlHoacTenClass + '" class="anh-popup-lon">';
         } else {
             // Cập nhật chữ trong khung ảnh giữ chỗ
             anhPopup.innerText = "Ảnh chi tiết " + tenTrap;
@@ -51,7 +51,7 @@ function moPopupAnh(tieuDe, urlAnh) {
     if (lopPhuPopupAnh && khungAnhLon && tieuDeAnhLon) {
         if (urlAnh) {
             // Nếu có đường dẫn ảnh, tạo thẻ img để hiển thị
-            khungAnhLon.innerHTML = '<img src="' + urlAnh + '" style="width:100%; height:100%; object-fit:contain; border-radius:inherit;">';
+            khungAnhLon.innerHTML = '<img src="' + urlAnh + '" class="anh-popup-lon">';
         } else {
             // Nếu không có, hiển thị chữ
             khungAnhLon.innerText = tieuDe + " (Kích thước lớn)";

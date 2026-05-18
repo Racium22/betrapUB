@@ -35,7 +35,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ đen mờ 50% */
+    /* Lớp phủ đen mờ 50% */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
@@ -46,44 +47,69 @@
 }
 
 .noi-dung-banner h1 {
-    font-size: 3em;
-    color: #fff;
+    font-family: 'Great Vibes Local', cursive;
+    font-size: 4.4em;
+    /* Phóng to vì font thư pháp nét mảnh */
+    font-weight: bolder;
+    color: #ffe57e;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng chữ để dễ đọc hơn */
+    /* Đổ bóng chữ để dễ đọc hơn */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Định dạng đoạn văn mô tả trong banner */
 .noi-dung-banner p {
-    font-size: 1.2em;
-    color: #fff;
+    font-size: 2em;
+    font-weight: bolder;
+    font-style: italic;
+    color: #ff8585;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Định dạng khu vực thanh tìm kiếm trong banner */
-.thanh-tim-kiem {
-    margin-bottom: 30px;
+/* Khối tìm kiếm dịch vụ độc lập */
+.khu-vuc-tim-kiem-doc-lap {
+    padding: 30px 20px;
+    /* Màu kem nhạt cực nhẹ */
+    background-color: #fdfaf6;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    /* Viền vàng gold sang trọng */
+    border-bottom: 2px solid #C5A059;
 }
 
-/* Định dạng ô nhập liệu tìm kiếm */
-.thanh-tim-kiem input {
-    padding: 10px 20px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.khu-vuc-tim-kiem-doc-lap .thanh-tim-kiem {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
 }
 
-/* Định dạng nút tìm kiếm */
-.thanh-tim-kiem button {
-    padding: 10px 20px;
-    background-color: #333;
+.khu-vuc-tim-kiem-doc-lap input {
+    padding: 12px 25px;
+    width: 350px;
+    border: 1px solid #ddd;
+    border-right: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.khu-vuc-tim-kiem-doc-lap button {
+    padding: 12px 30px;
+    /* Đỏ đô */
+    background-color: #8C1313;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.khu-vuc-tim-kiem-doc-lap button:hover {
+    /* Đổi sang Vàng Gold khi di chuột */
+    background-color: #C5A059;
 }
 
 /* Định dạng khối chứa nút trong banner */
@@ -145,13 +171,6 @@
     color: #E63946;
 }
 
-/* Định dạng tiêu đề chung các phần */
-.tieu-de-phan {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 50px 0 30px;
-    color: #333;
-}
 
 /* Định dạng lưới chứa dịch vụ nổi bật */
 .luoi-dich-vu {
@@ -196,6 +215,7 @@
 
 /* Định dạng tiêu đề thẻ dịch vụ */
 .the-dich-vu h3 {
+    font-size: 1.8em;
     margin-bottom: 15px;
 }
 
@@ -306,7 +326,7 @@
 .cot-noi-dung h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #8C1313;
 }
 
 /* Định dạng đoạn văn trong phần giới thiệu */

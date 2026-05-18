@@ -71,7 +71,8 @@ div[class^="anh-thu-vien-"] {
     color: #fff;
     font-weight: bold;
     font-size: 1.2em;
-    opacity: 0; /* Ẩn đi mặc định */
+    /* Ẩn đi mặc định */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 

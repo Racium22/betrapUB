@@ -63,7 +63,7 @@ div[class^="anh-mau-trap-"] {
 .the-mau-trap h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #333;
+    color: #8C1313;
 }
 
 /* Định dạng giá tham khảo */
@@ -93,7 +93,8 @@ div[class^="anh-mau-trap-"] {
 
 /* Lớp phủ mờ toàn màn hình của popup */
 .lop-phu-popup {
-    display: none; /* Ẩn đi theo mặc định */
+    /* Ẩn đi theo mặc định */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;

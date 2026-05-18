@@ -1,19 +1,97 @@
-/* Thiết lập cơ bản cho toàn bộ trang web */
+/* Font Logo (Great Vibes) */
+@font-face {
+    font-family: 'Great Vibes Local';
+    src: url('../font/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Logo Mới (Cinzel - Sang trọng, Mạnh mẽ) */
+@font-face {
+    font-family: 'Cinzel Local';
+    src: url('../font/Cinzel-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Tiêu Đề (Cormorant Garamond) */
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../font/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../font/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Văn Bản (Inter) */
+@font-face {
+    font-family: 'Inter Local';
+    src: url('../font/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Local';
+    src: url('../font/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Local', 'Inter', sans-serif;
 }
 
-/* Định dạng cho phần thân trang web */
 body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
-/* --- CẤU HÌNH CHO TẤT CẢ HÌNH ẢNH SAU NÀY --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
+    color: #8C1313;
+    font-weight: bold;
+}
+
+/* Định dạng tiêu đề chung các phần */
+.tieu-de-phan {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 2.8em;
+    margin: 50px 0 40px;
+    color: #8C1313;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.tieu-de-phan::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #C5A059;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -29,8 +107,10 @@ div[class*="anh-"] img,
 div[class*="avatar-"] img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cắt cúp ảnh cho vừa khung */
-    border-radius: inherit; /* Kế thừa viền bo tròn từ khung cha */
+    /* Cắt cúp ảnh cho vừa khung */
+    object-fit: cover;
+    /* Kế thừa viền bo tròn từ khung cha */
+    border-radius: inherit;
 }
 
 /* Riêng logo và icon số liệu thì không cắt xén mà thu nhỏ vừa đủ */
@@ -38,6 +118,43 @@ div[class*="avatar-"] img {
 .khung-anh-logo-nho img,
 .khung-anh-so-lieu img {
     object-fit: contain;
+}
+/* --------------------------------------------- */
+/* Khối phân trang */
+.phan-trang {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 30px;
+}
+.phan-trang span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.phan-trang span:hover,
+.phan-trang span.active {
+    background-color: #8C1313;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Tiện ích ẩn phần tử */
+.an-phan-tu {
+    display: none;
+}
+
+/* Tiện ích cấu hình kích thước ảnh popup */
+.anh-popup-lon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: inherit;
 }
 /* --------------------------------------------- */
 
@@ -61,14 +178,17 @@ div[class*="avatar-"] img {
     align-items: center;
     gap: 10px;
     font-weight: bold;
-    font-size: 20px; /* Chữ nhỏ lại một chút để vừa 2 dòng */
-    color: #E63946;
+    font-size: 20px;
+    color: #8C1313;
     text-decoration: none;
 }
 
 .logo-thuong-hieu span {
+    font-family: 'Cinzel Local', serif;
+    font-size: 1.4em;
     display: inline-block;
-    line-height: 1.2;
+    line-height: 1.1;
+    font-weight: 700;
 }
 
 /* Định dạng khung giữ chỗ cho ảnh logo */
@@ -121,8 +241,9 @@ div[class*="avatar-"] img {
     transition: all 0.3s ease;
 }
 
-/* Hiệu ứng di chuột vào đường link trong menu */
-.thanh-menu-dieu-huong a:hover {
+/* Hiệu ứng di chuột vào đường link trong menu và trạng thái đang chọn (active) */
+.thanh-menu-dieu-huong a:hover,
+.thanh-menu-dieu-huong a.active {
     color: #fff;
     background-color: #E63946;
 }
@@ -138,7 +259,8 @@ div[class*="avatar-"] img {
 .hotline {
     font-weight: bold;
     color: #d32f2f;
-    white-space: nowrap; /* Ngăn bẻ dòng */
+    /* Ngăn bẻ dòng */
+    white-space: nowrap;
 }
 
 /* Định dạng nút đặt lịch chung */
@@ -152,7 +274,8 @@ div[class*="avatar-"] img {
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    white-space: nowrap; /* Ngăn bẻ dòng */
+    /* Ngăn bẻ dòng */
+    white-space: nowrap;
 }
 
 /* Hiệu ứng di chuột vào nút đặt lịch */
@@ -164,14 +287,16 @@ div[class*="avatar-"] img {
 .chan-trang {
     background-color: #333;
     color: #fff;
-    padding: 50px;
+    padding: 30px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1.5fr; /* Nới rộng cột 4 chứa Liên hệ để không rớt dòng email */
+    /* Nới rộng cột 4 chứa Liên hệ để không rớt dòng email */
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
     gap: 30px;
 }
 
 /* Định dạng các cột trong chân trang */
 .cot-chan-trang h3 {
+    font-family: 'Inter Local', 'Inter', sans-serif;
     margin-bottom: 20px;
     color: #E63946;
 }

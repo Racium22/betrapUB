@@ -72,3 +72,68 @@ if (danhSachAnhBanner.length > 0 && sliderNen) {
         sliderNen.style.transform = `translateX(-${chiSoBannerHienTai * 100}%)`;
     }, 3000);
 }
+
+// Xử lý bộ lọc thư viện ảnh
+const danhMucLoc = document.querySelectorAll(".danh-sach-danh-muc li");
+const cacKhungAnh = document.querySelectorAll(".luoi-thu-vien-anh .khung-anh");
+
+if(danhMucLoc.length > 0 && cacKhungAnh.length > 0) {
+    danhMucLoc.forEach(li => {
+        li.addEventListener('click', function() {
+            // Đổi màu danh mục đang chọn
+            danhMucLoc.forEach(item => item.classList.remove('dang-chon'));
+            this.classList.add('dang-chon');
+            
+            // Lấy tên danh mục để làm điều kiện lọc
+            let filterText = this.innerText.trim().toLowerCase();
+            
+            cacKhungAnh.forEach(khung => {
+                let classStr = khung.className.toLowerCase();
+                
+                if(filterText === 'tất cả') {
+                    khung.style.display = 'block';
+                } else if(filterText === 'tráp nam' && classStr.includes('be-trap-nam')) {
+                    khung.style.display = 'block';
+                } else if(filterText === 'tráp nữ' && classStr.includes('be-trap-nu')) {
+                    khung.style.display = 'block';
+                } else if(filterText === 'tráp cưới' && classStr.includes('trap') && !classStr.includes('be-trap')) {
+                    khung.style.display = 'block';
+                } else if(filterText === 'xe hoa' && classStr.includes('xe-hoa')) {
+                    khung.style.display = 'block';
+                } else if(filterText === 'gia tiên' && classStr.includes('gia-tien')) {
+                    khung.style.display = 'block';
+                } else if(filterText === 'ảnh thực tế' && classStr.includes('be-trap')) {
+                    khung.style.display = 'block';
+                } else {
+                    khung.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Xử lý bộ lọc mẫu tráp
+const locSoLuong = document.getElementById("loc-so-luong");
+const locMauSac = document.getElementById("loc-mau-sac");
+const cacMauTrap = document.querySelectorAll(".danh-sach-mau-trap .the-mau-trap");
+
+if(locSoLuong && locMauSac && cacMauTrap.length > 0) {
+    function locMauTrap() {
+        let soLuongValue = locSoLuong.value;
+        let mauSacValue = locMauSac.value;
+        
+        cacMauTrap.forEach(trap => {
+            let matchesSoLuong = soLuongValue === 'tat-ca' || trap.getAttribute('data-so-luong') === soLuongValue;
+            let matchesMauSac = mauSacValue === 'tat-ca' || trap.getAttribute('data-mau-sac') === mauSacValue;
+            
+            if(matchesSoLuong && matchesMauSac) {
+                trap.style.display = 'block';
+            } else {
+                trap.style.display = 'none';
+            }
+        });
+    }
+    
+    locSoLuong.addEventListener('change', locMauTrap);
+    locMauSac.addEventListener('change', locMauTrap);
+}

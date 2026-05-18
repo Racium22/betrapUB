@@ -27,7 +27,7 @@
             <ul class="thanh-menu-dieu-huong">
                 <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="dich-vu.html">Dịch vụ</a></li>
-                <li><a href="mau-trap.html">Mẫu tráp</a></li>
+                <li><a href="mau-trap.html" class="active">Mẫu tráp</a></li>
                 <li><a href="thu-vien-anh.html">Thư viện ảnh</a></li>
                 <li><a href="lien-he.html">Liên hệ</a></li>
             </ul>
@@ -35,7 +35,7 @@
 
         <!-- Khối chứa hotline và nút đặt lịch -->
         <div class="nhom-nut-dau-trang">
-            <span class="hotline">Hotline: 0901 234 567</span>
+            <span class="hotline">Hotline: 0868291585</span>
             <a href="lien-he.html" class="nut-dat-lich">ĐẶT LỊCH</a>
         </div>
     </header>
@@ -44,14 +44,15 @@
         <!-- Tiêu đề bộ lọc -->
         <span class="tieu-de-loc">Lọc theo:</span>
         <!-- Lọc theo số lượng tráp -->
-        <select class="o-chon-loc">
+        <select class="o-chon-loc" id="loc-so-luong">
             <option value="tat-ca">Tất cả số lượng</option>
             <option value="5-trap">5 Tráp</option>
             <option value="7-trap">7 Tráp</option>
             <option value="9-trap">9 Tráp</option>
+            <option value="11-trap">11 Tráp</option>
         </select>
         <!-- Lọc theo màu sắc -->
-        <select class="o-chon-loc">
+        <select class="o-chon-loc" id="loc-mau-sac">
             <option value="tat-ca">Tất cả màu sắc</option>
             <option value="do">Màu Đỏ</option>
             <option value="vang">Màu Vàng Gold</option>
@@ -62,7 +63,7 @@
     <!-- Khối lưới chứa danh sách các mẫu tráp -->
     <section class="danh-sach-mau-trap">
         <!-- Thẻ mẫu tráp 1 -->
-        <div class="the-mau-trap">
+        <div class="the-mau-trap" data-so-luong="7-trap" data-mau-sac="do">
             <div class="anh-mau-trap-1">
                 <img src="Anh/trap-rong-phuong.jpg" alt="Tráp Rồng Phượng">
             </div>
@@ -72,7 +73,7 @@
         </div>
         
         <!-- Thẻ mẫu tráp 2 -->
-        <div class="the-mau-trap">
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="vang">
             <div class="anh-mau-trap-2">
                 <img src="Anh/trap-hoa-sen.jpg" alt="Tráp Hoa Sen">
             </div>
@@ -82,7 +83,7 @@
         </div>
 
         <!-- Thẻ mẫu tráp 3 -->
-        <div class="the-mau-trap">
+        <div class="the-mau-trap" data-so-luong="9-trap" data-mau-sac="hong">
             <div class="anh-mau-trap-3">
                 <img src="Anh/trap-hien-dai.jpg" alt="Tráp Hiện Đại">
             </div>
@@ -92,7 +93,7 @@
         </div>
 
         <!-- Thẻ mẫu tráp 4 -->
-        <div class="the-mau-trap">
+        <div class="the-mau-trap" data-so-luong="11-trap" data-mau-sac="vang">
             <div class="anh-mau-trap-4">
                 <img src="Anh/trap-cuoi-luxury.jpg" alt="Tráp Luxury">
             </div>
@@ -102,75 +103,75 @@
         </div>
 
         <!-- Thẻ mẫu tráp 5 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-5">Ảnh Tráp Rồng Phượng 2</div>
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="do">
+            <div class="anh-mau-trap-5"><img src="Anh/trap-01.jpg" alt="Tráp Rồng Phượng 2"></div>
             <h3>Bộ 5 Tráp Rồng Phượng Tiêu Chuẩn</h3>
             <p class="gia-tham-khao">Từ 3.800.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Rồng Phượng Tiêu Chuẩn', 'anh-mau-trap-5')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Rồng Phượng Tiêu Chuẩn', 'Anh/trap-01.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 6 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-6">Ảnh Tráp Hoa Sen 2</div>
+        <div class="the-mau-trap" data-so-luong="7-trap" data-mau-sac="vang">
+            <div class="anh-mau-trap-6"><img src="Anh/trap-02.jpg" alt="Tráp Hoa Sen 2"></div>
             <h3>Bộ 7 Tráp Hoa Sen Mộc Mạc</h3>
             <p class="gia-tham-khao">Từ 4.200.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Hoa Sen Mộc Mạc', 'anh-mau-trap-6')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 7 Tráp Hoa Sen Mộc Mạc', 'Anh/trap-02.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 7 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-7">Ảnh Tráp Hiện Đại Tone Xanh</div>
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="hong">
+            <div class="anh-mau-trap-7"><img src="Anh/trap-03.jpg" alt="Tráp Hiện Đại Tone Xanh"></div>
             <h3>Bộ 5 Tráp Hiện Đại Tone Xanh</h3>
             <p class="gia-tham-khao">Từ 3.500.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hiện Đại Tone Xanh', 'anh-mau-trap-7')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 5 Tráp Hiện Đại Tone Xanh', 'Anh/trap-03.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 8 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-8">Ảnh Tráp Truyền Thống Đỏ</div>
+        <div class="the-mau-trap" data-so-luong="9-trap" data-mau-sac="do">
+            <div class="anh-mau-trap-8"><img src="Anh/trap-04.jpg" alt="Tráp Truyền Thống Đỏ"></div>
             <h3>Bộ 9 Tráp Truyền Thống Tone Đỏ</h3>
             <p class="gia-tham-khao">Từ 5.500.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Truyền Thống Tone Đỏ', 'anh-mau-trap-8')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Bộ 9 Tráp Truyền Thống Tone Đỏ', 'Anh/trap-04.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 9 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-9">Ảnh Tráp Trái Cây Nhập</div>
+        <div class="the-mau-trap" data-so-luong="7-trap" data-mau-sac="vang">
+            <div class="anh-mau-trap-9"><img src="Anh/trap-05.jpg" alt="Tráp Trái Cây Nhập"></div>
             <h3>Tráp Trái Cây Nhập Khẩu Rồng Phượng</h3>
             <p class="gia-tham-khao">Từ 2.000.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Trái Cây Nhập Khẩu Rồng Phượng', 'anh-mau-trap-9')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Trái Cây Nhập Khẩu Rồng Phượng', 'Anh/trap-05.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 10 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-10">Ảnh Tráp Bánh Phu Thê</div>
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="do">
+            <div class="anh-mau-trap-10"><img src="Anh/trap-06.jpg" alt="Tráp Bánh Phu Thê"></div>
             <h3>Tráp Bánh Phu Thê Xếp Tháp</h3>
             <p class="gia-tham-khao">Từ 1.200.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Bánh Phu Thê Xếp Tháp', 'anh-mau-trap-10')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Bánh Phu Thê Xếp Tháp', 'Anh/trap-06.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 11 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-11">Ảnh Tráp Rượu Ngoại</div>
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="vang">
+            <div class="anh-mau-trap-11"><img src="Anh/trap-07.jpg" alt="Tráp Rượu Ngoại"></div>
             <h3>Tráp Rượu Ngoại & Thuốc Lá Xịn</h3>
             <p class="gia-tham-khao">Từ 3.000.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Rượu Ngoại & Thuốc Lá Xịn', 'anh-mau-trap-11')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Rượu Ngoại & Thuốc Lá Xịn', 'Anh/trap-07.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Thẻ mẫu tráp 12 -->
-        <div class="the-mau-trap">
-            <div class="anh-mau-trap-12">Ảnh Tráp Lợn Quay</div>
+        <div class="the-mau-trap" data-so-luong="5-trap" data-mau-sac="do">
+            <div class="anh-mau-trap-12"><img src="Anh/trap-08.jpg" alt="Tráp Lợn Quay"></div>
             <h3>Tráp Heo Sữa Quay Nguyên Con</h3>
             <p class="gia-tham-khao">Từ 2.500.000 VNĐ</p>
-            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Heo Sữa Quay Nguyên Con', 'anh-mau-trap-12')">Xem chi tiết</button>
+            <button class="nut-xem-chi-tiet-trap" onclick="moPopup('Tráp Heo Sữa Quay Nguyên Con', 'Anh/trap-08.jpg')">Xem chi tiết</button>
         </div>
 
         <!-- Khối Phân Trang -->
-        <div class="phan-trang" style="grid-column: 1 / -1; text-align: center; margin-top: 20px;">
-            <span style="display: inline-block; padding: 10px 20px; background-color: #E63946; color: #fff; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 0 5px;">1</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">2</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">3</span>
-            <span style="display: inline-block; padding: 10px 20px; background-color: #ddd; color: #333; border-radius: 5px; cursor: pointer; margin: 0 5px;">Tiếp &raquo;</span>
+        <div class="phan-trang">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>Tiếp &raquo;</span>
         </div>
     </section>
 
@@ -241,9 +242,9 @@
         <div class="cot-chan-trang">
             <h3>Liên Hệ</h3>
             <ul>
-                <li>📍 Địa chỉ: 123 Đường Quang Trung,</br>Uông Bí, Quảng Ninh</li>
-                <li>📞 Hotline: 0901 234 567</li>
-                <li>✉️ Email: lienhe@betrapuongbi.com</li>
+
+                <li>📞 Hotline: 0868291585</li>
+                <li>✉️ Email: phamthingochuyen06zs@gmail.com</li>
             </ul>
         </div>
     </footer>
