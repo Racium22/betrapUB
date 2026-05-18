@@ -1,4 +1,4 @@
-/* Font Logo (Great Vibes) */
+/* Font Great Vibes */
 @font-face {
     font-family: 'Great Vibes Local';
     src: url('../font/GreatVibes-Regular.ttf') format('truetype');
@@ -7,7 +7,7 @@
     font-display: swap;
 }
 
-/* Font Logo Mới (Cinzel - Sang trọng, Mạnh mẽ) */
+/* Font Cinzel  */
 @font-face {
     font-family: 'Cinzel Local';
     src: url('../font/Cinzel-Bold.ttf') format('truetype');
@@ -33,7 +33,7 @@
     font-display: swap;
 }
 
-/* Font Văn Bản (Inter) */
+/* Font Văn Bản */
 @font-face {
     font-family: 'Inter Local';
     src: url('../font/Inter_18pt-Regular.ttf') format('truetype');
@@ -113,7 +113,7 @@ div[class*="avatar-"] img {
     border-radius: inherit;
 }
 
-/* Riêng logo và icon số liệu thì không cắt xén mà thu nhỏ vừa đủ */
+/*logo và icon số liệu không cắt xén mà thu nhỏ vừa đủ */
 .khung-anh-logo img,
 .khung-anh-logo-nho img,
 .khung-anh-so-lieu img {
@@ -181,11 +181,12 @@ div[class*="avatar-"] img {
     font-size: 20px;
     color: #8C1313;
     text-decoration: none;
+    padding-bottom: 10px;
 }
 
 .logo-thuong-hieu span {
     font-family: 'Cinzel Local', serif;
-    font-size: 1.4em;
+    font-size: 1em;
     display: inline-block;
     line-height: 1.1;
     font-weight: 700;
@@ -193,8 +194,9 @@ div[class*="avatar-"] img {
 
 /* Định dạng khung giữ chỗ cho ảnh logo */
 .khung-anh-logo {
-    width: 50px;
-    height: 50px;
+    border: 0.5px solid #c7c2c2;/* tô viền ảnh nhẹ */
+    width: 65px;
+    height: 65px;
     background-color: #ddd;
     border-radius: 5px;
     display: flex;
@@ -202,19 +204,6 @@ div[class*="avatar-"] img {
     align-items: center;
     color: #888;
     font-size: 12px;
-}
-
-.khung-anh-logo-nho {
-    width: 30px;
-    height: 30px;
-    background-color: #555;
-    border-radius: 3px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: #ccc;
-    font-size: 10px;
-    margin-right: 5px;
 }
 
 /* Định dạng thanh menu điều hướng */
