@@ -344,3 +344,20 @@ div[class*="avatar-"] img {
         text-align: center;
     }
 }
+
+/* Khối thông tin tác giả dưới chân trang */
+.thong-tin-tac-gia {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-top: 1px solid #2d2d2d;
+    font-family: 'Inter Local', 'Inter', sans-serif;
+}
+
+.thong-tin-tac-gia p {
+    margin: 6px 0;
+    letter-spacing: 0.5px;
+}
+
