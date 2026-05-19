@@ -275,7 +275,7 @@ div[class*="avatar-"] img {
 /* Định dạng phần chân trang (Footer) */
 .chan-trang {
     background-color: #333;
-    color: #fff;
+    color: #ffc375;
     padding: 30px;
     display: grid;
     /* Nới rộng cột 4 chứa Liên hệ để không rớt dòng email */
@@ -289,7 +289,10 @@ div[class*="avatar-"] img {
     margin-bottom: 20px;
     color: #E63946;
 }
-
+/* Định dạng văn bản slogan */
+.cot-chan-trang p {
+    font-size: 18px;
+}
 /* Định dạng danh sách link trong chân trang */
 .cot-chan-trang ul {
     list-style: none;
@@ -298,11 +301,12 @@ div[class*="avatar-"] img {
 /* Định dạng các thẻ li trong footer */
 .cot-chan-trang ul li {
     margin-bottom: 10px;
+    font-size: 15.5px;
 }
 
 /* Định dạng các link trong footer */
 .cot-chan-trang ul li a {
-    color: #ccc;
+    color: #ff8f75;
     text-decoration: none;
     transition: color 0.3s ease;
 }
