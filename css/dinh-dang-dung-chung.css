@@ -231,11 +231,11 @@ div[class*="avatar-"] img {
 }
 
 /* Hiệu ứng di chuột vào đường link trong menu và trạng thái đang chọn (active) */
-.thanh-menu-dieu-huong a:hover,
-.thanh-menu-dieu-huong a.active {
-    color: #fff;
-    background-color: #E63946;
-}
+    .thanh-menu-dieu-huong a:hover,
+    .thanh-menu-dieu-huong a.active {
+        color: #fff;
+        background-color: #70e639;
+    }
 
 /* Định dạng nhóm nút bên phải header */
 .nhom-nut-dau-trang {
