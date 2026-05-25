@@ -63,7 +63,12 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: serif;
     color: #8C1313;
     font-weight: bold;
@@ -98,12 +103,14 @@ img {
 }
 
 /* Cấu hình để ảnh chèn vào khung luôn vừa vặn, không bị tràn hay vỡ bố cục */
-div[class*="khung-anh-"], div[class*="anh-"], div[class*="avatar-"] {
+div[class*="khung-anh-"],
+div[class*="anh-"],
+div[class*="avatar-"] {
     overflow: hidden;
 }
 
-div[class*="khung-anh-"] img, 
-div[class*="anh-"] img, 
+div[class*="khung-anh-"] img,
+div[class*="anh-"] img,
 div[class*="avatar-"] img {
     width: 100%;
     height: 100%;
@@ -119,6 +126,7 @@ div[class*="avatar-"] img {
 .khung-anh-so-lieu img {
     object-fit: contain;
 }
+
 /* --------------------------------------------- */
 /* Khối phân trang */
 .phan-trang {
@@ -126,6 +134,7 @@ div[class*="avatar-"] img {
     text-align: center;
     margin-top: 30px;
 }
+
 .phan-trang span {
     display: inline-block;
     padding: 10px 20px;
@@ -137,6 +146,7 @@ div[class*="avatar-"] img {
     font-weight: 500;
     transition: 0.3s;
 }
+
 .phan-trang span:hover,
 .phan-trang span.active {
     background-color: #8C1313;
@@ -156,6 +166,7 @@ div[class*="avatar-"] img {
     object-fit: contain;
     border-radius: inherit;
 }
+
 /* --------------------------------------------- */
 
 /* Định dạng phần đầu trang (Header) cố định */
@@ -163,7 +174,7 @@ div[class*="avatar-"] img {
     position: sticky;
     top: 0;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -194,7 +205,8 @@ div[class*="avatar-"] img {
 
 /* Định dạng khung giữ chỗ cho ảnh logo */
 .khung-anh-logo {
-    border: 0.5px solid #c7c2c2;/* tô viền ảnh nhẹ */
+    border: 0.5px solid #c7c2c2;
+    /* tô viền ảnh nhẹ */
     width: 65px;
     height: 65px;
     background-color: #ddd;
@@ -231,11 +243,11 @@ div[class*="avatar-"] img {
 }
 
 /* Hiệu ứng di chuột vào đường link trong menu và trạng thái đang chọn (active) */
-    .thanh-menu-dieu-huong a:hover,
-    .thanh-menu-dieu-huong a.active {
-        color: #fff;
-        background-color: #70e639;
-    }
+.thanh-menu-dieu-huong a:hover,
+.thanh-menu-dieu-huong a.active {
+    color: #fff;
+    background-color: #f12b2b;
+}
 
 /* Định dạng nhóm nút bên phải header */
 .nhom-nut-dau-trang {
@@ -289,10 +301,12 @@ div[class*="avatar-"] img {
     margin-bottom: 20px;
     color: #E63946;
 }
+
 /* Định dạng văn bản slogan */
 .cot-chan-trang p {
     font-size: 18px;
 }
+
 /* Định dạng danh sách link trong chân trang */
 .cot-chan-trang ul {
     list-style: none;
@@ -335,13 +349,13 @@ div[class*="avatar-"] img {
         padding: 15px;
         gap: 15px;
     }
-    
+
     .thanh-menu-dieu-huong {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
-    
+
     .chan-trang {
         grid-template-columns: 1fr;
         padding: 20px;
@@ -364,4 +378,3 @@ div[class*="avatar-"] img {
     margin: 6px 0;
     letter-spacing: 0.5px;
 }
-
