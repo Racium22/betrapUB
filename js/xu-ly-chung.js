@@ -114,19 +114,21 @@ if(danhMucLoc.length > 0 && cacKhungAnh.length > 0) {
 
 // Xử lý bộ lọc mẫu tráp
 const locSoLuong = document.getElementById("loc-so-luong");
-const locMauSac = document.getElementById("loc-mau-sac");
 const cacMauTrap = document.querySelectorAll(".danh-sach-mau-trap .the-mau-trap");
 
-if(locSoLuong && locMauSac && cacMauTrap.length > 0) {
+if(locSoLuong && cacMauTrap.length > 0) {
+    // Hàm thực hiện việc lọc các mẫu tráp dựa trên số lượng được chọn
     function locMauTrap() {
+        // Lấy giá trị số lượng cần lọc
         let soLuongValue = locSoLuong.value;
-        let mauSacValue = locMauSac.value;
         
+        // Duyệt qua từng mẫu tráp để kiểm tra điều kiện hiển thị
         cacMauTrap.forEach(trap => {
+            // Kiểm tra mẫu tráp có khớp với số lượng được chọn hay không
             let matchesSoLuong = soLuongValue === 'tat-ca' || trap.getAttribute('data-so-luong') === soLuongValue;
-            let matchesMauSac = mauSacValue === 'tat-ca' || trap.getAttribute('data-mau-sac') === mauSacValue;
             
-            if(matchesSoLuong && matchesMauSac) {
+            // Hiển thị nếu khớp, ngược lại ẩn đi
+            if(matchesSoLuong) {
                 trap.style.display = 'block';
             } else {
                 trap.style.display = 'none';
@@ -134,6 +136,6 @@ if(locSoLuong && locMauSac && cacMauTrap.length > 0) {
         });
     }
     
+    // Lắng nghe sự kiện thay đổi (change) của ô chọn bộ lọc số lượng
     locSoLuong.addEventListener('change', locMauTrap);
-    locMauSac.addEventListener('change', locMauTrap);
 }

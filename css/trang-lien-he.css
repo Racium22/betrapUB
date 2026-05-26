@@ -117,20 +117,6 @@
     color: #E63946;
 }
 
-/* Định dạng thẻ chứa iframe bản đồ */
-.khung-ban-do {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    overflow: hidden;
-}
-
-/* Định dạng iframe bản đồ */
-.khung-ban-do iframe {
-    border-radius: 8px;
-}
-
 /* =========================================
    Responsive Design cho Trang Liên Hệ
 ========================================= */
@@ -141,7 +127,7 @@
         gap: 30px;
     }
     
-    .khung-form-tu-van, .thong-tin-lien-he, .khung-ban-do {
+    .khung-form-tu-van, .thong-tin-lien-he {
         padding: 20px;
     }
 }
